@@ -1,17 +1,13 @@
 units:
-  # spacing variables
   kx: cx
   ky: cy
-  # spacing incl. padding
   px: kx+2
   py: ky+2
 points:
   zones:
-    # 7x4 matrix
     matrix:
       # fix placement on kicad
       anchor.shift: [150, -200]
-      # use own spacing variables
       key:
         padding: 1ky
         spread: 1kx
@@ -47,7 +43,6 @@ points:
       key:
         padding: 1ky
         spread: 1kx
-      # place thumb buttons at inner mod
       anchor:
         ref: matrix_inner_mod
         shift: [2.5, -3]
@@ -103,3 +98,31 @@ outlines:
           shift: [-0.5px, -0.5py]
         - ref: matrix_outer_bottom
           shift: [-0.5px, -0.5py]
+pcbs:
+  vox:
+    outlines.main.outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust.shift: [0, -5]
+      nicenano:
+        what: promicro
+        params:
+          orientation: "down"
+        where:
+          ref: matrix_middle_top
+          shift: [3px, 0.5py]
+          rotate: -90
