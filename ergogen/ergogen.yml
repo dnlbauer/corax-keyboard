@@ -124,5 +124,5 @@ pcbs:
           orientation: "down"
         where:
           ref: matrix_middle_top
-          shift: [3px, 0.5py]
+          shift: [3kx+5, 0.5ky]
           rotate: -90
