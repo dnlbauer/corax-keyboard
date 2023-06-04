@@ -62,3 +62,44 @@ points:
       rows:
         cluster:
   rotate: 8
+outlines:
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+  raw:
+    - what: rectangle
+      where: true
+      bound: true
+      size: [px, py]
+  board:
+    - what: polygon
+      operation: stack
+      fillet: 2
+      points:
+        - ref: matrix_outer2_home
+          shift: [-0.5px, -0.5py]
+        - ref: matrix_outer2_home
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_outer_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_pinky_num
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_ring_num
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_middle_num
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_middle_num
+          shift: [0.5px, 0.5py]
+        - ref: matrix_middle_num
+          shift: [3.9px, 0.5py]
+        - ref: thumbs_space_cluster
+          shift: [0.75px, -0.75py]
+        - ref: thumbs_space_cluster
+          shift: [-0.75px, -0.5py]
+        - ref: matrix_index_mod
+          shift: [0, -0.5py]
+        - ref: matrix_ring_mod
+          shift: [-0.5px, -0.5py]
+        - ref: matrix_outer_bottom
+          shift: [-0.5px, -0.5py]
