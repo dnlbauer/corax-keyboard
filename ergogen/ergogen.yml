@@ -1,8 +1,9 @@
 units:
   kx: cx
   ky: cy
-  px: kx+2
-  py: ky+2
+  padding: 2
+  px: kx+padding
+  py: ky+padding
 points:
   zones:
     matrix:
@@ -45,15 +46,15 @@ points:
         spread: 1kx
       anchor:
         ref: matrix_inner_mod
-        shift: [2.5, -3]
+        shift: [3, -5]
       columns:
         layer:
-          key.splay: -15
+          key.splay: -25
         space:
           key:
             width: 1.5kx
-            splay: 75
-            shift: [2.5, -2.5]
+            splay: -100
+            shift: [-2, 3]
       rows:
         cluster:
   rotate: 8
@@ -66,11 +67,11 @@ outlines:
     - what: rectangle
       where: true
       bound: true
-      size: [px, py]
+      size: [px+1, py+1]
   board:
     - what: polygon
       operation: stack
-      fillet: 2
+      # fillet: 2
       points:
         - ref: matrix_outer2_home
           shift: [-0.5px, -0.5py]
@@ -85,13 +86,13 @@ outlines:
         - ref: matrix_middle_num
           shift: [-0.5px, 0.5py]
         - ref: matrix_middle_num
-          shift: [0.5px, 0.5py]
-        - ref: matrix_middle_num
-          shift: [3.9px, 0.5py]
+          shift: [0.5px+2px+21, 0.5py]
+        - ref: matrix_inner_bottom
+          shift: [0.5px+2padding+21, -0.5py]
         - ref: thumbs_space_cluster
-          shift: [0.75px, -0.75py]
+          shift: [-0.75px+padding, 0.5py+padding]
         - ref: thumbs_space_cluster
-          shift: [-0.75px, -0.5py]
+          shift: [0.75px+padding, 0.5py+padding]
         - ref: matrix_index_mod
           shift: [0, -0.5py]
         - ref: matrix_ring_mod
