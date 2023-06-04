@@ -1,0 +1,64 @@
+units:
+  # spacing variables
+  kx: cx
+  ky: cy
+  # spacing incl. padding
+  px: kx+2
+  py: ky+2
+points:
+  zones:
+    # 7x4 matrix
+    matrix:
+      # fix placement on kicad
+      anchor.shift: [150, -200]
+      # use own spacing variables
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        outer2:
+          rows.mod.skip: true
+          rows.bottom.skip: true
+          rows.top.skip: true
+          rows.num.skip: true
+        outer:
+          rows.num.skip: true
+          rows.mod.skip: true
+          key.splay: -4
+        pinky:
+          rows.mod.skip: true
+          key.splay: -4
+        ring:
+          key.stagger: 0.5ky
+        middle:
+          key.stagger: 0.2ky
+        index:
+          key.stagger: -0.2ky
+        inner:
+          rows.mod.skip: true
+          key.stagger: -2.5
+      rows:
+        mod:
+        bottom:
+        home:
+        top:
+        num:
+    thumbs:
+      key:
+        padding: 1ky
+        spread: 1kx
+      # place thumb buttons at inner mod
+      anchor:
+        ref: matrix_inner_mod
+        shift: [2.5, -3]
+      columns:
+        layer:
+          key.splay: -15
+        space:
+          key:
+            width: 1.5kx
+            splay: 75
+            shift: [2.5, -2.5]
+      rows:
+        cluster:
+  rotate: 8
