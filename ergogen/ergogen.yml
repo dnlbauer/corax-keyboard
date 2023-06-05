@@ -21,12 +21,11 @@ points:
         outer:
           rows.num.skip: true
           rows.mod.skip: true
-          key.splay: -4
         pinky:
           rows.mod.skip: true
-          key.splay: -4
         ring:
           key.stagger: 0.5ky
+          key.splay: -8
         middle:
           key.stagger: 0.2ky
         index:
@@ -46,7 +45,7 @@ points:
         spread: 1kx
       anchor:
         ref: matrix_inner_mod
-        shift: [3, -5]
+        shift: [2, -4]
       columns:
         layer:
           key.splay: -25
@@ -54,7 +53,7 @@ points:
           key:
             width: 1.5kx
             splay: -100
-            shift: [-2, 3]
+            shift: [0, 3]
       rows:
         cluster:
   rotate: 8
