@@ -23,9 +23,10 @@ points:
           rows.mod.skip: true
         pinky:
           rows.mod.skip: true
+          key.splay: -5
         ring:
           key.stagger: 0.5ky
-          key.splay: -8
+          key.splay: -5
         middle:
           key.stagger: 0.2ky
         index:
@@ -45,7 +46,7 @@ points:
         spread: 1kx
       anchor:
         ref: matrix_inner_mod
-        shift: [2, -4]
+        shift: [2, -6]
       columns:
         layer:
           key.splay: -25
@@ -56,7 +57,7 @@ points:
             shift: [0, 3]
       rows:
         cluster:
-  rotate: 8
+  rotate: 10
 outlines:
   keys:
     - what: rectangle
@@ -99,7 +100,7 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [-0.5px, -0.5py]
 pcbs:
-  vox:
+  left:
     outlines.main.outline: board
     footprints:
       choc_hotswap:
