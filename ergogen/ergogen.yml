@@ -14,26 +14,37 @@ points:
         spread: 1kx
       columns:
         outer2:
-          rows.mod.skip: true
-          rows.bottom.skip: true
-          rows.top.skip: true
-          rows.num.skip: true
+          rows:
+            mod.skip: true
+            bottom.skip: true
+            top.skip: true
+            num.skip: true
         outer:
-          rows.num.skip: true
-          rows.mod.skip: true
+          rows:
+            num.skip: true
+            mod.skip: true
         pinky:
-          rows.mod.skip: true
-          key.splay: -5
+          rows:
+            mod.skip: true
+          key:
+            splay: -5
         ring:
-          key.stagger: 0.5ky
-          key.splay: -5
+          rows:
+            mod.skip: true
+          key:
+            stagger: 0.5ky
+            splay: -5
         middle:
-          key.stagger: 0.2ky
+          key:
+            stagger: 0.2ky
         index:
-          key.stagger: -0.2ky
+          key:
+            stagger: -0.2ky
         inner:
-          rows.mod.skip: true
-          key.stagger: -2.5
+          rows:
+            mod.skip: true
+          key:
+            stagger: -2.5
       rows:
         mod:
         bottom:
@@ -95,12 +106,12 @@ outlines:
           shift: [0.75px+padding, 0.5py+padding]
         - ref: matrix_index_mod
           shift: [0, -0.5py]
-        - ref: matrix_ring_mod
+        - ref: matrix_index_mod
           shift: [-0.5px, -0.5py]
         - ref: matrix_outer_bottom
           shift: [-0.5px, -0.5py]
 pcbs:
-  left:
+  vox:
     outlines.main.outline: board
     footprints:
       choc_hotswap:
