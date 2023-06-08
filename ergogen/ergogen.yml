@@ -68,8 +68,8 @@ points:
         space:
           key:
             width: 1.5kx
-            splay: 75
-            shift: [-3, -4]
+            splay: 65
+            shift: [-5, -5]
       rows:
         cluster:
   rotate: 10
