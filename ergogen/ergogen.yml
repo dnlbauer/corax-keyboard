@@ -1,6 +1,8 @@
 units:
-  kx: cx
-  ky: cy
+  kx: cx  # cx=18
+  ky: cy  # cy=17
+  mbkx: 17.5
+  mbky: 16.5
   padding: 2
   px: kx+padding
   py: ky+padding
@@ -17,6 +19,8 @@ points:
           rows:
             mod.skip: true
             bottom.skip: true
+            home:
+              bind: [0, 5, 0, 0]
             top.skip: true
             num.skip: true
         outer:
@@ -52,20 +56,20 @@ points:
         top:
         num:
     thumbs:
+      anchor:
+        ref: matrix_inner_mod
+        shift: [1, -8]
       key:
         padding: 1ky
         spread: 1kx
-      anchor:
-        ref: matrix_inner_mod
-        shift: [2, -6]
       columns:
         layer:
-          key.splay: -25
+          key.splay: -15
         space:
           key:
             width: 1.5kx
-            splay: -100
-            shift: [0, 3]
+            splay: 75
+            shift: [-3, -4]
       rows:
         cluster:
   rotate: 10
@@ -73,12 +77,17 @@ outlines:
   keys:
     - what: rectangle
       where: true
-      size: [kx-0.5, ky-0.5]
+      fillet: 2
+      size: [mbkx, mbky]
   raw:
     - what: rectangle
       where: true
       bound: true
-      size: [px+1, py+1]
+      size: [px+5, py+5]
+  fillet:
+    - what: outline
+      name: raw
+      fillet: 2
   board:
     - what: polygon
       operation: stack
@@ -97,15 +106,17 @@ outlines:
         - ref: matrix_middle_num
           shift: [-0.5px, 0.5py]
         - ref: matrix_middle_num
-          shift: [0.5px+2px+21, 0.5py]
+          shift: [0.5px, 0.5py]
+        - ref: matrix_middle_num
+          shift: [0.5px+2px-2padding, 0.5py]
         - ref: matrix_inner_bottom
-          shift: [0.5px+2padding+21, -0.5py]
+          shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
-          shift: [-0.75px+padding, 0.5py+padding]
+          shift: [0.75px, -0.5py]
         - ref: thumbs_space_cluster
-          shift: [0.75px+padding, 0.5py+padding]
+          shift: [-0.75px, -0.5py]
         - ref: matrix_index_mod
-          shift: [0, -0.5py]
+          shift: [-0.5px, -0.5py]
         - ref: matrix_index_mod
           shift: [-0.5px, -0.5py]
         - ref: matrix_outer_bottom
@@ -130,11 +141,3 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust.shift: [0, -5]
-      nicenano:
-        what: promicro
-        params:
-          orientation: "down"
-        where:
-          ref: matrix_middle_top
-          shift: [3kx+5, 0.5ky]
-          rotate: -90
