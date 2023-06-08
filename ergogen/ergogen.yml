@@ -111,7 +111,7 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [-0.5px, -0.5py]
 pcbs:
-  vox:
+  left:
     outlines.main.outline: board
     footprints:
       choc_hotswap:
