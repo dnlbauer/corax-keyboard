@@ -43,7 +43,7 @@ points:
             stagger: 0.2ky
         index:
           key:
-            stagger: -0.2ky
+            stagger: -0.33ky
         inner:
           rows:
             mod.skip: true
@@ -58,18 +58,18 @@ points:
     thumbs:
       anchor:
         ref: matrix_middle_home
-        shift: [37, -50.4]
+        shift: [41, -45]
       key:
         padding: 1ky
         spread: 1kx
       columns:
         layer:
-          key.splay: -25
+          key.splay: -15
         space:
           key:
             width: 1.5kx
-            splay: 80
-            shift: [14-kx, -2]
+            splay: 75
+            shift: [18-kx, -4]
       rows:
         cluster:
   rotate: 10
