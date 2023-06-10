@@ -58,7 +58,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_middle_home
-        shift: [40.7, -46.4]
+        shift: [37, -50.4]
       key:
         padding: 1ky
         spread: 1kx
