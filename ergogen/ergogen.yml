@@ -57,19 +57,19 @@ points:
         num:
     thumbs:
       anchor:
-        ref: matrix_inner_mod
-        shift: [1, -8]
+        ref: matrix_middle_home
+        shift: [40.7, -46.4]
       key:
         padding: 1ky
         spread: 1kx
       columns:
         layer:
-          key.splay: -15
+          key.splay: -25
         space:
           key:
             width: 1.5kx
-            splay: 65
-            shift: [-5, -5]
+            splay: 80
+            shift: [14-kx, -2]
       rows:
         cluster:
   rotate: 10
