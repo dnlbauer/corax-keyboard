@@ -61,7 +61,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_middle_home
-        shift: [39, -46]
+        shift: [38, -45]
       key:
         padding: 1ky
         spread: 1kx
@@ -72,7 +72,7 @@ points:
           key:
             width: 1.5kx
             splay: 75
-            shift: [14-kx, -4]
+            shift: [13-kx, -3]
       rows:
         cluster:
   rotate: 10
