@@ -135,12 +135,13 @@ pcbs:
           keycaps: true
           reverse: false
           hotswap: true
-          from: "{{column_net}}"
-          to: "{{colrow}}"
+          from: =column_net
+          to: =colrow
       diode:
         what: diode
         where: true
         params:
-          from: "{{colrow}}"
-          to: "{{row_net}}"
+          from: =colrow
+          to: =column_net
         adjust.shift: [0, -5]
+        
