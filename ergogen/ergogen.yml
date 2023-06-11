@@ -32,10 +32,13 @@ points:
             mod.skip: true
           key:
             splay: -5
+            
+            origin: [0, 8]
         ring:
           rows:
             mod.skip: true
           key:
+            origin: [0, 8]
             stagger: 0.33ky
             splay: -5
         middle:
@@ -58,7 +61,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_middle_home
-        shift: [41, -45]
+        shift: [39, -46]
       key:
         padding: 1ky
         spread: 1kx
@@ -69,7 +72,7 @@ points:
           key:
             width: 1.5kx
             splay: 75
-            shift: [18-kx, -4]
+            shift: [14-kx, -4]
       rows:
         cluster:
   rotate: 10
