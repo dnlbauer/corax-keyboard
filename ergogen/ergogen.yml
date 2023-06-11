@@ -6,12 +6,16 @@ units:
   padding: 2
   px: kx+padding
   py: ky+padding
+  mcu_height: 34
+  mcu_width: 18
+  mcu_padding: 2
 points:
   zones:
     matrix:
       # fix placement on kicad
       anchor.shift: [150, -200]
       key:
+        tags: [switch]
         padding: 1ky
         spread: 1kx
       columns:
@@ -63,6 +67,7 @@ points:
         ref: matrix_middle_home
         shift: [38, -45]
       key:
+        tags: [switch]
         padding: 1ky
         spread: 1kx
       columns:
@@ -75,6 +80,17 @@ points:
             shift: [13-kx, -3]
       rows:
         cluster:
+    mcu:
+      anchor:
+        ref: matrix_inner_num
+      columns:
+        mcu:
+          key:
+            tags: [mcu]
+            width: mcu_height  # footprint width/height unintuitive
+            height: mcu_width
+            rotate: -90
+            shift: [kx+mcu_padding, -mcu_width/2+1]
   rotate: 10
 outlines:
   keys:
@@ -110,14 +126,16 @@ outlines:
           shift: [-0.5px, 0.5py]
         - ref: matrix_middle_num
           shift: [0.5px, 0.5py]
-        - ref: matrix_middle_num
-          shift: [0.5px+2px-2padding, 0.5py]
+        - ref: matrix_inner_num
+          shift: [0.5px, 0.5py]
+        - ref: matrix_inner_num
+          shift: [0.5px+mcu_padding+mcu_width, 0.5py]
         - ref: matrix_inner_bottom
+          shift: [0.5px+mcu_padding+mcu_width, -0.5py]
+        - ref: thumbs_space_cluster
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
-          shift: [0.75px, -0.5py]
-        - ref: thumbs_space_cluster
-          shift: [-0.75px, -0.5py]
+          shift: [-0.5px, -0.5py]
         - ref: matrix_index_mod
           shift: [-0.5px, -0.5py]
         - ref: matrix_index_mod
@@ -130,7 +148,7 @@ pcbs:
     footprints:
       choc_hotswap:
         what: choc
-        where: true
+        where: switch
         params:
           keycaps: true
           reverse: true
@@ -138,10 +156,16 @@ pcbs:
           from: =column_net
           to: =colrow
       diode:
+        # TODO diode without throughhole?
         what: diode
-        where: true
+        where: switch
         params:
           from: =colrow
           to: =column_net
         adjust.shift: [0, -5]
-        
+      promicro:
+        what: promicro
+        where: mcu
+        params:
+          # TODO decide if soldered on opposite side?
+          orientation: up
