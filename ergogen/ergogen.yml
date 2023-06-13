@@ -111,7 +111,6 @@ points:
         scrollwheel:
           key:
             tags: [scrollwheel]
-            rotate: -15
             shift: [px, -4]
             column_net: col5
             width: scrollwheel_width
@@ -168,11 +167,9 @@ outlines:
         - ref: matrix_inner_num
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_num
-          shift: [0.5px+mcu_padding+mcu_width, 0.5py]
-        - ref: scrollwheel_scrollwheel_scrollwheel
-          shift: [0.5scrollwheel_width+padding, 0.5scrollwheel_height+padding]  
-        #- ref: matrix_inner_bottom
-        #  shift: [0.5px+mcu_padding+mcu_width, -0.5py]
+          shift: [0.5px+mcu_padding+mcu_width+1, 0.5py]  
+        - ref: matrix_inner_bottom
+          shift: [0.5px+mcu_padding+mcu_width+1, -0.5py]
         - ref: thumbs_space_cluster
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
