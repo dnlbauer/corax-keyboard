@@ -9,6 +9,8 @@ units:
   mcu_height: 34
   mcu_width: 18
   mcu_padding: 2
+  scrollwheel_width: 17
+  scrollwheel_height: 14
 points:
   zones:
     matrix:
@@ -108,10 +110,12 @@ points:
       columns:
         scrollwheel:
           key:
-            tags: [switch,scrollwheel]
+            tags: [scrollwheel]
             rotate: -15
-            shift: [px+padding, -3]
+            shift: [px, -4]
             column_net: col5
+            width: scrollwheel_width
+            height: scrollwheel_height
       rows:
         scrollwheel:
           row_net: row4
@@ -165,8 +169,10 @@ outlines:
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_num
           shift: [0.5px+mcu_padding+mcu_width, 0.5py]
-        - ref: matrix_inner_bottom
-          shift: [0.5px+mcu_padding+mcu_width, -0.5py]
+        - ref: scrollwheel_scrollwheel_scrollwheel
+          shift: [0.5scrollwheel_width+padding, 0.5scrollwheel_height+padding]  
+        #- ref: matrix_inner_bottom
+        #  shift: [0.5px+mcu_padding+mcu_width, -0.5py]
         - ref: thumbs_space_cluster
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
@@ -193,11 +199,39 @@ pcbs:
       diode:
         # TODO diode without throughhole?
         what: diode
-        where: switch
+        where: [switch]
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust.shift: [0, -5]
+      scrollwheel:
+        what: scrollwheel
+        where: [scrollwheel]
+        params:
+          from: col5
+          to: row4
+          A: ENCB
+          B: GND
+          C: ENCA
+          D: undefined
+      scroll_diode:
+        # TODO diode without throughhole
+        what: diode
+        where: [scrollwheel]
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust.shift: [-3, 10]  
+      rotary:
+        what: rotary
+        where: [scrollwheel]
+        params:
+          from: col5
+          to: row4
+          A: ENCA
+          B: ENCB
+          C: GND
+        adjust.rotate: 90  
       promicro:
         what: promicro
         where: mcu
