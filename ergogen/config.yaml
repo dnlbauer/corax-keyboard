@@ -111,7 +111,7 @@ points:
         scrollwheel:
           key:
             tags: [scrollwheel]
-            shift: [px, -4]
+            shift: [px, 0]
             column_net: col5
             width: scrollwheel_width
             height: scrollwheel_height
@@ -218,7 +218,9 @@ pcbs:
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
-        adjust.shift: [-3, 10]  
+        adjust:
+          shift: [-3, -12]
+          rotate: 180 
       rotary:
         what: rotary
         where: [scrollwheel]
@@ -250,3 +252,15 @@ pcbs:
           P14: col3
           P16: col4
           P10: col5
+      niceview:
+        what: niceview
+        where: mcu
+        adjust:
+          shift: [18, 0]
+          rotate: 180
+        params:
+          outline: true
+          side: 'F'
+          SDA: SDA
+          SCL: SCL
+          CS: CS
