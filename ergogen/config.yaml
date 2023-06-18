@@ -189,12 +189,11 @@ pcbs:
         where: switch
         params:
           keycaps: true
-          reverse: true
+          reverse: false
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
-        # TODO diode without throughhole?
         what: diode
         where: [switch]
         params:
@@ -212,7 +211,6 @@ pcbs:
           C: ENCA
           D: undefined
       scroll_diode:
-        # TODO diode without throughhole
         what: diode
         where: [scrollwheel]
         params:
