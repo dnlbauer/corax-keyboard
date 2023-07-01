@@ -8,7 +8,7 @@ units:
   py: ky+padding
   mcu_height: 34
   mcu_width: 18
-  mcu_padding: 2
+  mcu_padding: 1
   scrollwheel_width: 17
   scrollwheel_height: 14
 points:
@@ -111,7 +111,7 @@ points:
         scrollwheel:
           key:
             tags: [scrollwheel]
-            shift: [px, 0]
+            shift: [kx+mcu_padding, 0]
             column_net: col5
             width: scrollwheel_width
             height: scrollwheel_height
@@ -128,7 +128,7 @@ points:
             width: mcu_height  # footprint width/height unintuitive
             height: mcu_width
             rotate: -90
-            shift: [kx+mcu_padding, -mcu_width/2+1]
+            shift: [kx+mcu_padding, -mcu_width/2+0.5]
 outlines:
   keys:
     - what: rectangle
@@ -166,9 +166,9 @@ outlines:
         - ref: matrix_inner_num
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_num
-          shift: [0.5px+mcu_padding+mcu_width+1, 0.5py]  
+          shift: [0.5px+mcu_padding+mcu_width-0.9, 0.5py]  
         - ref: matrix_inner_bottom
-          shift: [0.5px+mcu_padding+mcu_width+1, -0.5py]
+          shift: [0.5px+mcu_padding+mcu_width-0.9, -0.5py]
         - ref: thumbs_space_cluster
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
