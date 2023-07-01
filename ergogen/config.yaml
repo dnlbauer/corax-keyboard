@@ -216,7 +216,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [-3, -12]
+          shift: [-5, 9]
           rotate: 180 
       rotary:
         what: rotary
