@@ -40,7 +40,6 @@ points:
           rows:
             mod.skip: true
           key:
-            splay: -5
             origin: [0, 8]
             column_net: col1
         ring:
