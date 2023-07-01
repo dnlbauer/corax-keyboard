@@ -12,10 +12,11 @@ units:
   scrollwheel_width: 17
   scrollwheel_height: 14
 points:
+  rotate: 5
   zones:
     matrix:
       # fix placement on kicad
-      anchor.shift: [150, -200]
+      anchor.shift: [125, -200]
       key:
         tags: [switch]
         padding: 1ky
@@ -128,7 +129,6 @@ points:
             height: mcu_width
             rotate: -90
             shift: [kx+mcu_padding, -mcu_width/2+1]
-  rotate: 10
 outlines:
   keys:
     - what: rectangle
