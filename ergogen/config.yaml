@@ -36,7 +36,9 @@ points:
           rows:
             num.skip: true
             mod.skip: true
-          key.column_net: col0
+          key:
+            column_net: col0
+            stagger: -0.33ky
         pinky:
           rows:
             mod.skip: true
