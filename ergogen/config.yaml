@@ -265,3 +265,22 @@ pcbs:
           SDA: SDA
           SCL: SCL
           CS: CS
+      slider:
+        what: slider
+        where: mcu
+        adjust:
+          shift: [-17.1, 0]
+          rotate: 90
+        params:
+          side: B
+          from: switch_from
+          to: RAW
+      battery:
+        what: battery
+        where: mcu
+        adjust:
+          shift: [-16.9, 0]
+        params:
+          RAW: switch_from
+
+        
