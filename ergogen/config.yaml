@@ -173,10 +173,8 @@ outlines:
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
           shift: [-0.5px, -0.5py]
-        - ref: matrix_index_mod
-          shift: [-0.5px, -0.5py]
-        - ref: matrix_index_mod
-          shift: [-0.5px, -0.5py]
+        - ref: matrix_middle_mod
+          shift: [-0.5px, -0.5py]  
         - ref: matrix_outer_bottom
           shift: [-0.5px, -0.5py]
 pcbs:
