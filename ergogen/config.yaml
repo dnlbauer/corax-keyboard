@@ -128,7 +128,7 @@ points:
             width: mcu_height  # footprint width/height unintuitive
             height: mcu_width
             rotate: -90
-            shift: [kx+mcu_padding, -mcu_width/2+0.5]
+            shift: [kx+mcu_padding, -mcu_width/2-0.3]
 outlines:
   keys:
     - what: rectangle
@@ -166,9 +166,11 @@ outlines:
         - ref: matrix_inner_num
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_num
-          shift: [0.5px+mcu_padding+mcu_width-0.9, 0.5py]  
+          #shift: [0.5px+mcu_padding+mcu_width-0.9, 0.5py]  
+          shift: [0.5px+mcu_padding+mcu_width, 0.5py]  
         - ref: matrix_inner_bottom
-          shift: [0.5px+mcu_padding+mcu_width-0.9, -0.5py]
+          #shift: [0.5px+mcu_padding+mcu_width-0.9, -0.5py]
+          shift: [0.5px+mcu_padding+mcu_width, -0.5py]
         - ref: thumbs_space_cluster
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
