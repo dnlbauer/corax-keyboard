@@ -279,8 +279,16 @@ pcbs:
         what: battery
         where: mcu
         adjust:
-          shift: [-16.9, 0]
+          shift: [-17, 0]
         params:
           RAW: switch_from
-
+      reset:
+        what: reset
+        where: mcu
+        params:
+          from: GND
+          to: RST
+        adjust:
+          shift: [27, 8]
+          rotate: 180
         
