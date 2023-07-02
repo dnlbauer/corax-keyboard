@@ -111,7 +111,7 @@ points:
         scrollwheel:
           key:
             tags: [scrollwheel]
-            shift: [kx+mcu_padding, 0]
+            shift: [kx+mcu_padding-0.5, 0.2py]
             column_net: col5
             width: scrollwheel_width
             height: scrollwheel_height
