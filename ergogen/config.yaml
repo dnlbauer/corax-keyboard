@@ -28,23 +28,23 @@ points:
             bottom.skip: true
             home:
               bind: [0, 5, 0, 0]
-              row_net: row0
+              row_net: col0
             top.skip: true
             num.skip: true
-          key.column_net: col0
+          key.column_net: row0
         outer:
           rows:
             num.skip: true
             mod.skip: true
           key:
-            column_net: col0
+            column_net: row0
             stagger: -0.33ky
         pinky:
           rows:
             mod.skip: true
           key:
             origin: [0, 8]
-            column_net: col1
+            column_net: row1
         ring:
           rows:
             mod.skip: true
@@ -52,38 +52,38 @@ points:
             origin: [0, 8]
             stagger: 0.33ky
             splay: -5
-            column_net: col2
+            column_net: row2
         middle:
           key:
             stagger: 0.2ky
-            column_net: col3
+            column_net: row3
           rows:
             mod:
-              column_net: col1
+              column_net: row1
         index:
           key:
             stagger: -0.33ky
-            column_net: col4
+            column_net: row4
           rows:
             mod:
-              column_net: col2
+              column_net: row2
         inner:
           rows:
             mod.skip: true
           key:
             stagger: -2.5
-            column_net: col5
+            column_net: row5
       rows:
         mod:
-          row_net: row4
+          row_net: col4
         bottom:
-          row_net: row3
+          row_net: col3
         home:
-          row_net: row2
+          row_net: col2
         top:
-          row_net: row1
+          row_net: col1
         num:
-          row_net: row0
+          row_net: col0
     thumbs:
       anchor:
         ref: matrix_middle_home
@@ -96,16 +96,16 @@ points:
         layer:
           key:
             splay: -15
-            column_net: col3
+            column_net: row3
         space:
           key:
             width: 1.5kx
             splay: 75
             shift: [13-kx, -3]
-            column_net: col4
+            column_net: row4
       rows:
         cluster:
-          row_net: row4
+          row_net: col4
     scrollwheel:
       anchor:
         ref: matrix_inner_bottom
@@ -114,12 +114,12 @@ points:
           key:
             tags: [scrollwheel]
             shift: [kx+mcu_padding-0.75, 0.1py]
-            column_net: col5
+            column_net: row5
             width: scrollwheel_width
             height: scrollwheel_height
       rows:
         scrollwheel:
-          row_net: row4
+          row_net: col4
     mcu:
       anchor:
         ref: matrix_inner_num
@@ -240,19 +240,19 @@ pcbs:
           P1: CS
           P2: SDA
           P3: SCL
-          P5: row0
-          P6: row1
-          P7: row2
-          P8: row3
-          P9: row4
+          P5: col0
+          P6: col1
+          P7: col2
+          P8: col3
+          P9: col4
           P21: ENCA
           P20: ENCB
-          P19: col0
-          P18: col1
-          P15: col2
-          P14: col3
-          P16: col4
-          P10: col5
+          P19: row0
+          P18: row1
+          P15: row2
+          P14: row3
+          P16: row4
+          P10: row5
       niceview:
         what: niceview
         where: mcu
