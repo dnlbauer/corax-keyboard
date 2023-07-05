@@ -207,12 +207,22 @@ pcbs:
         what: scrollwheel
         where: [scrollwheel]
         params:
-          from: col5
-          to: row4
+          from: "{{column_net}}"
+          to: "{{colrow}}"
           A: ENCB
           B: GND
           C: ENCA
           D: undefined
+      rotary:
+        what: rotary
+        where: [scrollwheel]
+        params:
+          from: "{{colrow}}"
+          to: "{{column_net}}"
+          A: ENCA
+          B: ENCB
+          C: GND
+        adjust.rotate: 90  
       scroll_diode:
         what: diode
         where: [scrollwheel]
@@ -222,16 +232,6 @@ pcbs:
         adjust:
           shift: [-5, 9]
           rotate: 180 
-      rotary:
-        what: rotary
-        where: [scrollwheel]
-        params:
-          from: col5
-          to: row4
-          A: ENCA
-          B: ENCB
-          C: GND
-        adjust.rotate: 90  
       promicro:
         what: promicro
         where: mcu
