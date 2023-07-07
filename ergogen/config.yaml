@@ -288,8 +288,25 @@ pcbs:
           from: GND
           to: RST
         adjust:
-          shift: [27, 8]
-          rotate: 180
+          shift: [10+mcu_height/2, 0]
+          rotate: -90
+      plexi_inner:
+        what: hole
+        where: mcu
+        params:
+          size: 3.5
+          drill: 2.2
+        adjust:
+          shift: [10+mcu_height/2, -mcu_width/2+1.5]
+      plexi_outer:
+        what: hole
+        where: mcu
+        params:
+          size: 3.5
+          drill: 2.2
+        adjust:
+          shift: [10+mcu_height/2, mcu_width/2-1.5]
+
       screw_hole_top_left:
         what: hole
         where:
