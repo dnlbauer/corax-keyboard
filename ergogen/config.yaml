@@ -201,8 +201,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [8.25, -1]
-          rotate: 90
+          shift: [0, -5]
       scrollwheel:
         what: scrollwheel
         where: [scrollwheel]
