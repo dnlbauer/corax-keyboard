@@ -290,4 +290,44 @@ pcbs:
         adjust:
           shift: [27, 8]
           rotate: 180
-        
+      screw_hole_top_left:
+        what: hole
+        where:
+          ref.aggregate.parts: [matrix_ring_num, matrix_ring_top]
+          shift: [-11, 0]
+        params:
+          size: 4.7
+          drill: 4.1
+      screw_hole_top_right:
+        what: hole
+        where:
+          ref.aggregate.parts: [matrix_index_num, matrix_inner_num, matrix_index_top, matrix_inner_top]
+          shift: [0, 2]
+        params:
+          size: 4.7
+          drill: 4.1
+      screw_hole_bottom_left:
+        what: hole
+        where:
+          ref.aggregate.parts: [matrix_outer_home, matrix_outer_bottom, matrix_pinky_home, matrix_pinky_bottom]
+          shift: [0, 2]
+        params:
+          size: 4.7
+          drill: 4.1
+      screw_hole_bottom_right:
+        what: hole
+        where:
+          ref.aggregate.parts: [matrix_middle_mod, matrix_middle_bottom, matrix_index_mod, matrix_index_bottom]
+          shift: [0, 4]
+        params:
+          size: 4.7
+          drill: 4.1
+      screw_hole_thumb:
+        what: hole
+        where:
+          ref.aggregate.parts: [thumbs_layer_cluster, thumbs_space_cluster]
+          shift: [10, 8]
+        params:
+          size: 4.7
+          drill: 4.1
+
