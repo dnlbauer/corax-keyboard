@@ -225,7 +225,7 @@ pcbs:
           A: ENCB
           B: GND
           C: ENCA
-          D: undefined
+          D: scroolwheel_undefined
       rotary:
         what: rotary
         where: [scrollwheel]
@@ -249,18 +249,10 @@ pcbs:
         where: mcu
         params:
           orientation: down
-          GND: GND_MCU
-          VCC: VCC_MCU
-          RAW: RAW_MCU
-          RST: RST_MCU
-          P2: SDA
-          P3: SCL
-          P4: CS
-          P5: col0
-          P6: col1
-          P7: col2
-          P8: col3
-          P9: col4
+          RAW: RAW_P1
+          GND1: undefined
+          RST: RST_GND
+          VCC: VCC_GND 
           P21: ENCA
           P20: ENCB
           P19: row0
@@ -269,85 +261,96 @@ pcbs:
           P14: row3
           P16: row4
           P10: row5
+          P1: RAW_P1
+          GND2: RST_GND
+          GND3: VCC_GND
+          P2: SDA
+          P3: SCL
+          P4: CS
+          P5: col0
+          P6: col1
+          P7: col2
+          P8: col3
+          P9: col4
       jumper_f_raw:
         what: jumper
         where: mcu
         params:
           from: RAW
-          to: RAW_MCU
+          to: RAW_P1
           side: "F"
         adjust:
-          shift: [-11.45, -4]
+          shift: [-11.45, -2.5]
           rotate: -90
       jumper_f_rst:
         what: jumper
         where: mcu
         params:
           from: RST
-          to: RST_MCU
+          to: RST_GND
           side: "F"
         adjust:
-          shift: [-8.9, -4]
+          shift: [-8.9, -2.5]
           rotate: -90
       jumper_f_vcc:
         what: jumper
         where: mcu
         params:
           from: VCC
-          to: VCC_MCU
+          to: VCC_GND
           side: "F"
         adjust:
-          shift: [-6.35, -4]
+          shift: [-6.35, -2.5]
           rotate: -90
       jumper_f_gnd:
         what: jumper
         where: mcu
         params:
           from: GND
-          to: GND_MCU
+          to: RST_GND
           side: "F"
         adjust:
-          shift: [-8.9, 4]
+          shift: [-8.9, 2.5]
           rotate: 90
       jumper_b_raw:
         what: jumper
         where: mcu
         params:
           from: RAW
-          to: RAW_MCU
+          to: RAW_P1
           side: "B"
         adjust:
-          shift: [-11.45, 4]
+          shift: [-11.45, 2.5]
           rotate: 90
       jumper_b_rst:
         what: jumper
         where: mcu
         params:
           from: RST
-          to: RST_MCU
+          to: RST_GND
           side: "B"
         adjust:
-          shift: [-8.9, 4]
+          shift: [-8.9, 2.5]
           rotate: 90
       jumper_b_vcc:
         what: jumper
         where: mcu
         params:
           from: VCC
-          to: VCC_MCU
+          to: VCC_GND
           side: "B"
         adjust:
-          shift: [-6.35, 4]
+          shift: [-6.35, 2.5]
           rotate: 90
       jumper_b_gnd:
         what: jumper
         where: mcu
         params:
           from: GND
-          to: GND_MCU
+          to: RST_GND
           side: "B"
         adjust:
-          shift: [-8.9, -4]
+          shift: [-8.9, -2.5]
           rotate: -90
       niceview:
         what: niceview
