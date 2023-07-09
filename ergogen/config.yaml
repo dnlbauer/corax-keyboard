@@ -273,6 +273,22 @@ pcbs:
           P7: col2
           P8: col3
           P9: col4
+      jumper_text_f:
+        what: text
+        where: mcu
+        params:
+          side: "F"
+          text: "Solder this side &\\nPlace Nice!Nano face down."
+        adjust:
+          rotate: 90
+      jumper_text_b:
+        what: text
+        where: mcu
+        params:
+          side: "B"
+          text: "Solder this side &\\nPlace Nice!Nano face down."
+        adjust:
+          rotate: 90
       jumper_f_raw:
         what: jumper
         where: mcu
