@@ -361,7 +361,17 @@ pcbs:
           SDA: SDA
           SCL: SCL
           CS: CS
-      slider:
+      slider_f:
+        what: slider
+        where: mcu
+        adjust:
+          shift: [-17.1, 0]
+          rotate: 90
+        params:
+          side: F
+          from: switch_from
+          to: RAW
+      slider_b:
         what: slider
         where: mcu
         adjust:
