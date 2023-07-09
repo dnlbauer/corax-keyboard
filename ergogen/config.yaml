@@ -245,7 +245,6 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [-5, 9]
-          rotate: 180 
       promicro:
         what: promicro
         where: mcu
