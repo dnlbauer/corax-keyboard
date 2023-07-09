@@ -103,6 +103,7 @@ points:
             splay: 75
             shift: [13-kx, -3]
             column_net: row4
+            tags: [switch_space]
       rows:
         cluster:
           row_net: col4
@@ -187,13 +188,15 @@ pcbs:
     footprints:
       choc_hotswap:
         what: choc
-        where: switch
+        where: [switch, switch_space]
         params:
           keycaps: true
           reverse: false
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
+        adjust:
+          rotate: 180
       diode:
         what: diode
         where: [switch]
@@ -201,7 +204,19 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -5]
+          rotate: -90
+          # 8.275 is the exact pad pos.
+          shift: [-8.275, 1]
+      diode_space:
+        what: diode
+        where: [switch_space]
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          rotate: 180
+          # 8.275 is the exact pad pos.
+          shift: [0, 8.275]
       scrollwheel:
         what: scrollwheel
         where: [scrollwheel]
@@ -306,7 +321,6 @@ pcbs:
           drill: 2.2
         adjust:
           shift: [10+mcu_height/2, mcu_width/2-1.5]
-
       screw_hole_top_left:
         what: hole
         where:
@@ -319,7 +333,7 @@ pcbs:
         what: hole
         where:
           ref.aggregate.parts: [matrix_index_num, matrix_inner_num, matrix_index_top, matrix_inner_top]
-          shift: [0, 2]
+          shift: [0, -2]
         params:
           size: 4.7
           drill: 4.1
@@ -327,15 +341,15 @@ pcbs:
         what: hole
         where:
           ref.aggregate.parts: [matrix_outer_home, matrix_outer_bottom, matrix_pinky_home, matrix_pinky_bottom]
-          shift: [0, 2]
+          shift: [0, -1]
         params:
           size: 4.7
           drill: 4.1
       screw_hole_bottom_right:
         what: hole
         where:
-          ref.aggregate.parts: [matrix_middle_mod, matrix_middle_bottom, matrix_index_mod, matrix_index_bottom]
-          shift: [0, 4]
+          ref.aggregate.parts: [matrix_middle_bottom, matrix_index_bottom]
+          shift: [0, -12]
         params:
           size: 4.7
           drill: 4.1
