@@ -250,7 +250,7 @@ pcbs:
         params:
           orientation: down
           RAW: RAW_P1
-          GND1: undefined
+          GND1: GND_P0
           RST: RST_GND
           VCC: VCC_GND 
           P21: ENCA
@@ -261,9 +261,10 @@ pcbs:
           P14: row3
           P16: row4
           P10: row5
-          P1: RAW_P1
-          GND2: RST_GND
-          GND3: VCC_GND
+          P1: P1_RAW
+          P0: P0_GND
+          GND2: GND_RST
+          GND3: GND_VCC
           P2: SDA
           P3: SCL
           P4: CS
@@ -307,7 +308,7 @@ pcbs:
         where: mcu
         params:
           from: GND
-          to: RST_GND
+          to: GND_RST
           side: "F"
         adjust:
           shift: [-8.9, 2.5]
@@ -317,7 +318,7 @@ pcbs:
         where: mcu
         params:
           from: RAW
-          to: RAW_P1
+          to: P1_RAW
           side: "B"
         adjust:
           shift: [-11.45, 2.5]
@@ -327,7 +328,7 @@ pcbs:
         where: mcu
         params:
           from: RST
-          to: RST_GND
+          to: GND_RST
           side: "B"
         adjust:
           shift: [-8.9, 2.5]
@@ -337,7 +338,7 @@ pcbs:
         where: mcu
         params:
           from: VCC
-          to: VCC_GND
+          to: GND_VCC
           side: "B"
         adjust:
           shift: [-6.35, 2.5]
