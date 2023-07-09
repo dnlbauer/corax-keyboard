@@ -362,9 +362,101 @@ pcbs:
         params:
           outline: true
           side: 'F'
-          SDA: SDA
-          SCL: SCL
-          CS: CS
+          SDA: NN_SDA_CS
+          SCL: NN_SCL_GND
+          VCC: NN_VCC
+          GND: NN_GND_SCL
+          CS: NN_CS_SDA
+      jumper_nn_f_sda:
+        what: jumper
+        where: mcu
+        params:
+          from: SDA
+          to: NN_SDA_CS
+          side: "F"
+        adjust:
+          shift: [20.50-3, -5.08]
+      jumper_nn_f_scl:
+        what: jumper
+        where: mcu
+        params:
+          from: SCL
+          to: NN_SCL_GND
+          side: "F"
+        adjust:
+          shift: [20.50-3, -2.54]
+      jumper_nn_f_vcc:
+        what: jumper
+        where: mcu
+        params:
+          from: VCC
+          to: NN_VCC
+          side: "F"
+        adjust:
+          shift: [20.50-3, 0]
+      jumper_nn_f_gnd:
+        what: jumper
+        where: mcu
+        params:
+          from: GND
+          to: NN_GND_SCL
+          side: "F"
+        adjust:
+          shift: [20.50-3, 2.54]
+      jumper_nn_f_cs:
+        what: jumper
+        where: mcu
+        params:
+          from: CS
+          to: NN_CS_SDA
+          side: "F"
+        adjust:
+          shift: [20.50-3, 5.08]
+      jumper_nn_b_sda:
+        what: jumper
+        where: mcu
+        params:
+          from: SDA
+          to: NN_CS_SDA
+          side: "B"
+        adjust:
+          shift: [20.50-3, 5.08]
+      jumper_nn_b_scl:
+        what: jumper
+        where: mcu
+        params:
+          from: SCL
+          to: NN_GND_SCL
+          side: "B"
+        adjust:
+          shift: [20.50-3, 2.54]
+      jumper_nn_b_vcc:
+        what: jumper
+        where: mcu
+        params:
+          from: VCC
+          to: NN_VCC
+          side: "B"
+        adjust:
+          shift: [20.50-3, 0]
+      jumper_nn_b_gnd:
+        what: jumper
+        where: mcu
+        params:
+          from: GND
+          to: NN_SCL_GND
+          side: "B"
+        adjust:
+          shift: [20.50-3, -2.54]
+      jumper_nn_b_cs:
+        what: jumper
+        where: mcu
+        params:
+          from: CS
+          to: NN_SDA_CS
+          side: "B"
+        adjust:
+          shift: [20.50-3, -5.08]
       slider_f:
         what: slider
         where: mcu
