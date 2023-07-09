@@ -183,7 +183,7 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [-0.5px, -0.5py]
 pcbs:
-  left:
+  keyboard:
     outlines.main.outline: board
     footprints:
       choc_hotswap:
@@ -565,4 +565,23 @@ pcbs:
         params:
           size: 4.7
           drill: 4.1
-
+      left_text:
+        what: text
+        where: matrix_middle_home
+        params:
+          text: "Left Hand Front"
+          side: F
+          knockout: true
+        adjust:
+          shift: [0, 4]
+          rotate: 90
+      right_text:
+        what: text
+        where: matrix_middle_home
+        params:
+          text: "Right Hand Front"
+          side: B
+          knockout: true
+        adjust:
+          rotate: 90
+          shift: [0, 4]
