@@ -191,7 +191,7 @@ pcbs:
         where: [switch, switch_space]
         params:
           keycaps: true
-          reverse: false
+          reverse: true
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
@@ -204,9 +204,8 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          rotate: -90
-          # 8.275 is the exact pad pos.
-          shift: [-8.275, 1]
+          rotate: 0
+          shift: [2.5, -9]
       diode_space:
         what: diode
         where: [switch_space]
@@ -214,9 +213,9 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          rotate: 180
-          # 8.275 is the exact pad pos.
-          shift: [0, 8.275]
+          rotate: -90
+          # 8.275 is exactly above the pad
+          shift: [-8.275, 1]
       scrollwheel:
         what: scrollwheel
         where: [scrollwheel]
