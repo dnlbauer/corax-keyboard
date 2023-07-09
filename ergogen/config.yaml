@@ -249,9 +249,13 @@ pcbs:
         where: mcu
         params:
           orientation: down
-          P1: CS
+          GND: GND_MCU
+          VCC: VCC_MCU
+          RAW: RAW_MCU
+          RST: RST_MCU
           P2: SDA
           P3: SCL
+          P4: CS
           P5: col0
           P6: col1
           P7: col2
@@ -265,6 +269,86 @@ pcbs:
           P14: row3
           P16: row4
           P10: row5
+      jumper_f_raw:
+        what: jumper
+        where: mcu
+        params:
+          from: RAW
+          to: RAW_MCU
+          side: "F"
+        adjust:
+          shift: [-11.45, -4]
+          rotate: -90
+      jumper_f_rst:
+        what: jumper
+        where: mcu
+        params:
+          from: RST
+          to: RST_MCU
+          side: "F"
+        adjust:
+          shift: [-8.9, -4]
+          rotate: -90
+      jumper_f_vcc:
+        what: jumper
+        where: mcu
+        params:
+          from: VCC
+          to: VCC_MCU
+          side: "F"
+        adjust:
+          shift: [-6.35, -4]
+          rotate: -90
+      jumper_f_gnd:
+        what: jumper
+        where: mcu
+        params:
+          from: GND
+          to: GND_MCU
+          side: "F"
+        adjust:
+          shift: [-8.9, 4]
+          rotate: 90
+      jumper_b_raw:
+        what: jumper
+        where: mcu
+        params:
+          from: RAW
+          to: RAW_MCU
+          side: "B"
+        adjust:
+          shift: [-11.45, 4]
+          rotate: 90
+      jumper_b_rst:
+        what: jumper
+        where: mcu
+        params:
+          from: RST
+          to: RST_MCU
+          side: "B"
+        adjust:
+          shift: [-8.9, 4]
+          rotate: 90
+      jumper_b_vcc:
+        what: jumper
+        where: mcu
+        params:
+          from: VCC
+          to: VCC_MCU
+          side: "B"
+        adjust:
+          shift: [-6.35, 4]
+          rotate: 90
+      jumper_b_gnd:
+        what: jumper
+        where: mcu
+        params:
+          from: GND
+          to: GND_MCU
+          side: "B"
+        adjust:
+          shift: [-8.9, -4]
+          rotate: -90
       niceview:
         what: niceview
         where: mcu
