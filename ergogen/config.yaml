@@ -278,7 +278,7 @@ pcbs:
         where: mcu
         params:
           side: "F"
-          text: "Solder this side &\\nPlace Nice!Nano face down."
+          text: "Place Nice!Nano face down &\\nsolder jumpers on the back side."
         adjust:
           rotate: 90
       jumper_text_b:
@@ -286,7 +286,7 @@ pcbs:
         where: mcu
         params:
           side: "B"
-          text: "Solder this side &\\nPlace Nice!Nano face down."
+          text: "Place Nice!Nano face down &\\nsolder jumpers on the back side."
         adjust:
           rotate: 90
       jumper_f_raw:
@@ -295,7 +295,7 @@ pcbs:
         params:
           from: RAW
           to: RAW_P1
-          side: "F"
+          side: B
         adjust:
           shift: [-11.45, -2.5]
           rotate: -90
@@ -305,7 +305,7 @@ pcbs:
         params:
           from: RST
           to: RST_GND
-          side: "F"
+          side: B
         adjust:
           shift: [-8.9, -2.5]
           rotate: -90
@@ -315,7 +315,7 @@ pcbs:
         params:
           from: VCC
           to: VCC_GND
-          side: "F"
+          side: B
         adjust:
           shift: [-6.35, -2.5]
           rotate: -90
@@ -325,7 +325,7 @@ pcbs:
         params:
           from: GND
           to: GND_RST
-          side: "F"
+          side: B
         adjust:
           shift: [-8.9, 2.5]
           rotate: 90
@@ -335,7 +335,7 @@ pcbs:
         params:
           from: RAW
           to: P1_RAW
-          side: "B"
+          side: F
         adjust:
           shift: [-11.45, 2.5]
           rotate: 90
@@ -345,7 +345,7 @@ pcbs:
         params:
           from: RST
           to: GND_RST
-          side: "B"
+          side: F
         adjust:
           shift: [-8.9, 2.5]
           rotate: 90
@@ -355,7 +355,7 @@ pcbs:
         params:
           from: VCC
           to: GND_VCC
-          side: "B"
+          side: F
         adjust:
           shift: [-6.35, 2.5]
           rotate: 90
@@ -365,7 +365,7 @@ pcbs:
         params:
           from: GND
           to: RST_GND
-          side: "B"
+          side: F
         adjust:
           shift: [-8.9, -2.5]
           rotate: -90
@@ -389,7 +389,7 @@ pcbs:
         params:
           from: SDA
           to: NN_SDA_CS
-          side: "F"
+          side: B
         adjust:
           shift: [20.50-3, -5.08]
       jumper_nn_f_scl:
@@ -398,7 +398,7 @@ pcbs:
         params:
           from: SCL
           to: NN_SCL_GND
-          side: "F"
+          side: B
         adjust:
           shift: [20.50-3, -2.54]
       jumper_nn_f_vcc:
@@ -407,7 +407,7 @@ pcbs:
         params:
           from: VCC
           to: NN_VCC
-          side: "F"
+          side: B
         adjust:
           shift: [20.50-3, 0]
       jumper_nn_f_gnd:
@@ -416,7 +416,7 @@ pcbs:
         params:
           from: GND
           to: NN_GND_SCL
-          side: "F"
+          side: B
         adjust:
           shift: [20.50-3, 2.54]
       jumper_nn_f_cs:
@@ -425,7 +425,7 @@ pcbs:
         params:
           from: CS
           to: NN_CS_SDA
-          side: "F"
+          side: B
         adjust:
           shift: [20.50-3, 5.08]
       jumper_nn_b_sda:
@@ -434,7 +434,7 @@ pcbs:
         params:
           from: SDA
           to: NN_CS_SDA
-          side: "B"
+          side: F
         adjust:
           shift: [20.50-3, 5.08]
       jumper_nn_b_scl:
@@ -443,7 +443,7 @@ pcbs:
         params:
           from: SCL
           to: NN_GND_SCL
-          side: "B"
+          side: F
         adjust:
           shift: [20.50-3, 2.54]
       jumper_nn_b_vcc:
@@ -452,7 +452,7 @@ pcbs:
         params:
           from: VCC
           to: NN_VCC
-          side: "B"
+          side: F
         adjust:
           shift: [20.50-3, 0]
       jumper_nn_b_gnd:
@@ -461,7 +461,7 @@ pcbs:
         params:
           from: GND
           to: NN_SCL_GND
-          side: "B"
+          side: F
         adjust:
           shift: [20.50-3, -2.54]
       jumper_nn_b_cs:
@@ -470,7 +470,7 @@ pcbs:
         params:
           from: CS
           to: NN_SDA_CS
-          side: "B"
+          side: F
         adjust:
           shift: [20.50-3, -5.08]
       slider_f:
