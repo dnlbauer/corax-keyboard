@@ -273,7 +273,7 @@ pcbs:
           P7: col2
           P8: col3
           P9: col4
-      jumper_text_f:
+      jumper_text_left:
         what: text
         where: mcu
         params:
@@ -281,7 +281,7 @@ pcbs:
           text: "Place Nice!Nano face down &\\nsolder jumpers on the back side."
         adjust:
           rotate: 90
-      jumper_text_b:
+      jumper_text_right:
         what: text
         where: mcu
         params:
@@ -289,7 +289,7 @@ pcbs:
           text: "Place Nice!Nano face down &\\nsolder jumpers on the back side."
         adjust:
           rotate: 90
-      jumper_f_raw:
+      jumper_left_raw:
         what: jumper
         where: mcu
         params:
@@ -299,7 +299,7 @@ pcbs:
         adjust:
           shift: [-11.45, -2.5]
           rotate: -90
-      jumper_f_rst:
+      jumper_left_rst:
         what: jumper
         where: mcu
         params:
@@ -309,7 +309,7 @@ pcbs:
         adjust:
           shift: [-8.9, -2.5]
           rotate: -90
-      jumper_f_vcc:
+      jumper_left_vcc:
         what: jumper
         where: mcu
         params:
@@ -319,7 +319,7 @@ pcbs:
         adjust:
           shift: [-6.35, -2.5]
           rotate: -90
-      jumper_f_gnd:
+      jumper_left_gnd:
         what: jumper
         where: mcu
         params:
@@ -329,7 +329,7 @@ pcbs:
         adjust:
           shift: [-8.9, 2.5]
           rotate: 90
-      jumper_b_raw:
+      jumper_right_raw:
         what: jumper
         where: mcu
         params:
@@ -339,7 +339,7 @@ pcbs:
         adjust:
           shift: [-11.45, 2.5]
           rotate: 90
-      jumper_b_rst:
+      jumper_right_rst:
         what: jumper
         where: mcu
         params:
@@ -349,7 +349,7 @@ pcbs:
         adjust:
           shift: [-8.9, 2.5]
           rotate: 90
-      jumper_b_vcc:
+      jumper_right_vcc:
         what: jumper
         where: mcu
         params:
@@ -359,7 +359,7 @@ pcbs:
         adjust:
           shift: [-6.35, 2.5]
           rotate: 90
-      jumper_b_gnd:
+      jumper_right_gnd:
         what: jumper
         where: mcu
         params:
@@ -383,7 +383,7 @@ pcbs:
           VCC: NN_VCC
           GND: NN_GND_SCL
           CS: NN_CS_SDA
-      jumper_nn_f_sda:
+      jumper_nv_left_sda:
         what: jumper
         where: mcu
         params:
@@ -392,7 +392,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-3, -5.08]
-      jumper_nn_f_scl:
+      jumper_nv_left_scl:
         what: jumper
         where: mcu
         params:
@@ -401,7 +401,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-3, -2.54]
-      jumper_nn_f_vcc:
+      jumper_nv_left_vcc:
         what: jumper
         where: mcu
         params:
@@ -410,7 +410,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-3, 0]
-      jumper_nn_f_gnd:
+      jumper_nv_left_gnd:
         what: jumper
         where: mcu
         params:
@@ -419,7 +419,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-3, 2.54]
-      jumper_nn_f_cs:
+      jumper_nv_left_cs:
         what: jumper
         where: mcu
         params:
@@ -428,7 +428,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-3, 5.08]
-      jumper_nn_b_sda:
+      jumper_nv_right_sda:
         what: jumper
         where: mcu
         params:
@@ -437,7 +437,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-3, 5.08]
-      jumper_nn_b_scl:
+      jumper_nv_right_scl:
         what: jumper
         where: mcu
         params:
@@ -446,7 +446,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-3, 2.54]
-      jumper_nn_b_vcc:
+      jumper_nv_right_vcc:
         what: jumper
         where: mcu
         params:
@@ -455,7 +455,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-3, 0]
-      jumper_nn_b_gnd:
+      jumper_nv_right_gnd:
         what: jumper
         where: mcu
         params:
@@ -464,7 +464,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-3, -2.54]
-      jumper_nn_b_cs:
+      jumper_nv_right_cs:
         what: jumper
         where: mcu
         params:
