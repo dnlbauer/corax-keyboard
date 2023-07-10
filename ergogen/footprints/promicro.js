@@ -135,6 +135,10 @@ module.exports = {
         (pad 22 thru_hole circle (at 8.89 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.P7.str})
         (pad 23 thru_hole circle (at 11.43 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.P8.str})
         (pad 24 thru_hole circle (at 13.97 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.P9.str})
+
+        ${''/* rect around RAW */}
+        (pad "" thru_hole rect (at -13.97 7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.1) (layers F.Cu F.Mask) (zone_connect 0) ${p.RAW.str})
+        (pad "" thru_hole rect (at -13.97 -7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.1) (layers B.Cu B.Mask) (zone_connect 0) ${p.P1.str})
       `
     }
     if(p.orientation == 'down') {
