@@ -29,27 +29,25 @@ module.exports = {
             ${p.GND.str})
             (pad 1 thru_hole oval (at 0.0  5.08 ${p.rot + 270}) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
             ${p.CS.str})
+
+            ${'' /* corner marks */}
+            (fp_line (start -1.25 -7) (end -1.25 7) (layer Dwgs.User) (width 0.15))
+            (fp_line (start -1.25 7) (end 34.75 7) (layer Dwgs.User) (width 0.15))
+            (fp_line (start 34.75 7) (end 34.75 -7) (layer Dwgs.User) (width 0.15))
+            (fp_line (start 34.75 -7) (end -1.25 -7) (layer Dwgs.User) (width 0.15))
+
         `
         function outline() {
             return `
               ${'' /* Nice!View outline */}
-              (fp_line (start -1.25 -7) (end -1.25 7) (layer F.SilkS) (width 0.15))
-              (fp_line (start -1.25 7) (end 34.75 7) (layer F.SilkS) (width 0.15))
-              (fp_line (start 34.75 7) (end 34.75 -7) (layer F.SilkS) (width 0.15))
-              (fp_line (start 34.75 -7) (end -1.25 -7) (layer F.SilkS) (width 0.15))
+              (fp_line (start -1.25 -6.5) (end -1.25 6.5) (layer F.SilkS) (width 0.15))
+              (fp_line (start -1.25 6.5) (end 1.25 6.5) (layer F.SilkS) (width 0.15))
+              (fp_line (start 1.25 6.5) (end 1.25 -6.5) (layer F.SilkS) (width 0.15))
+              (fp_line (start 1.25 -6.5) (end -1.25 -6.5) (layer F.SilkS) (width 0.15))
 
               ${'' /* labels */}
-              (fp_text user SDA (at 1.50 -5.08 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left)))
-              (fp_text user SCL (at 1.50 -2.54 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left)))
-              (fp_text user VCC (at 1.50 0.00 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left)))
-              (fp_text user GND (at 1.50 2.54 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left)))
-              (fp_text user CS  (at 1.50 5.08 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left)))
-
-              (fp_text user CS  (at 1.50 -5.08 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify right mirror)))
-              (fp_text user GND (at 1.50 -2.54 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify right mirror)))
-              (fp_text user VCC (at 1.50 0.00 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify right mirror)))
-              (fp_text user SCL (at 1.50 2.54 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify right mirror)))
-              (fp_text user SDA (at 1.50 5.08 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify right mirror)))
+              (fp_text user Nice!View (at -2 0.00 ${p.rot+90}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+              (fp_text user Nice!View (at -2 0.00 ${p.rot+90}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
 
               `
         }
