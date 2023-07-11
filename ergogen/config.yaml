@@ -205,7 +205,7 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           rotate: 0
-          shift: [2.5, -9]
+          shift: [0, -9]
       diode_space:
         what: diode
         where: [switch_space]
