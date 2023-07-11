@@ -298,7 +298,7 @@ pcbs:
           side: B
         adjust:
           shift: [-11.45, -2.5]
-          rotate: -90
+          rotate: 180
       jumper_left_rst:
         what: jumper
         where: mcu
@@ -308,7 +308,7 @@ pcbs:
           side: B
         adjust:
           shift: [-8.9, -2.5]
-          rotate: -90
+          rotate: 180
       jumper_left_vcc:
         what: jumper
         where: mcu
@@ -318,7 +318,7 @@ pcbs:
           side: B
         adjust:
           shift: [-6.35, -2.5]
-          rotate: -90
+          rotate: 180
       jumper_left_gnd:
         what: jumper
         where: mcu
@@ -328,7 +328,6 @@ pcbs:
           side: B
         adjust:
           shift: [-8.9, 2.5]
-          rotate: 90
       jumper_right_raw:
         what: jumper
         where: mcu
@@ -338,7 +337,6 @@ pcbs:
           side: F
         adjust:
           shift: [-11.45, 2.5]
-          rotate: 90
       jumper_right_rst:
         what: jumper
         where: mcu
@@ -348,7 +346,6 @@ pcbs:
           side: F
         adjust:
           shift: [-8.9, 2.5]
-          rotate: 90
       jumper_right_vcc:
         what: jumper
         where: mcu
@@ -358,7 +355,6 @@ pcbs:
           side: F
         adjust:
           shift: [-6.35, 2.5]
-          rotate: 90
       jumper_right_gnd:
         what: jumper
         where: mcu
@@ -368,7 +364,7 @@ pcbs:
           side: F
         adjust:
           shift: [-8.9, -2.5]
-          rotate: -90
+          rotate: 180
       niceview:
         what: niceview
         where: mcu
@@ -392,6 +388,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-2.5, -5.08]
+          rotate: -90
       jumper_nv_left_scl:
         what: jumper
         where: mcu
@@ -401,6 +398,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-2.5, -2.54]
+          rotate: -90
       jumper_nv_left_vcc:
         what: jumper
         where: mcu
@@ -410,6 +408,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-2.5, 0]
+          rotate: -90
       jumper_nv_left_gnd:
         what: jumper
         where: mcu
@@ -419,6 +418,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-2.5, 2.54]
+          rotate: -90
       jumper_nv_left_cs:
         what: jumper
         where: mcu
@@ -428,6 +428,7 @@ pcbs:
           side: B
         adjust:
           shift: [20.50-2.5, 5.08]
+          rotate: -90
       jumper_nv_right_sda:
         what: jumper
         where: mcu
@@ -437,6 +438,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-2.5, 5.08]
+          rotate: -90
       jumper_nv_right_scl:
         what: jumper
         where: mcu
@@ -446,6 +448,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-2.5, 2.54]
+          rotate: -90
       jumper_nv_right_vcc:
         what: jumper
         where: mcu
@@ -455,6 +458,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-2.5, 0]
+          rotate: -90
       jumper_nv_right_gnd:
         what: jumper
         where: mcu
@@ -464,6 +468,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-2.5, -2.54]
+          rotate: -90
       jumper_nv_right_cs:
         what: jumper
         where: mcu
@@ -473,6 +478,7 @@ pcbs:
           side: F
         adjust:
           shift: [20.50-2.5, -5.08]
+          rotate: -90
       slider_f:
         what: slider
         where: mcu
