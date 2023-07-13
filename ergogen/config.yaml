@@ -217,25 +217,15 @@ pcbs:
           # 8.275 is exactly above the pad
           shift: [-8.275, 1]
       scrollwheel:
-        what: scrollwheel
+        what: scrollwheel_mirrored
         where: [scrollwheel]
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
-          A: ENCB
-          B: GND
-          C: ENCA
-          D: scroolwheel_undefined
-      rotary:
-        what: rotary
-        where: [scrollwheel]
-        params:
-          from: "{{colrow}}"
-          to: "{{column_net}}"
-          A: ENCA
-          B: ENCB
-          C: GND
-        adjust.rotate: 90  
+          A: ENCB_undef
+          B: GND_ENCA
+          C: ENCA_GND
+          D: undef_ENCB
       scroll_diode:
         what: diode
         where: [scrollwheel]
@@ -243,7 +233,67 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [-5, 9]
+          shift: [-5, -9]
+      jumper_sw_left_a:
+        what: jumper
+        where: [scrollwheel]
+        params:
+          side: B  
+          to: ENCB_undef
+          from: ENCB
+        adjust:
+          rotate: 90
+          shift: [-2, 3.81]
+      jumper_sw_left_gnd:
+        what: jumper
+        where: [scrollwheel]
+        params:
+          side: B  
+          to: GND_ENCA
+          from: GND
+        adjust:
+          rotate: 90
+          shift: [-2, 1.27]
+      jumper_sw_left_ENCA:
+        what: jumper
+        where: [scrollwheel]
+        params:
+          side: B  
+          to: ENCA_GND
+          from: ENCA
+        adjust:
+          rotate: 90
+          shift: [-2, -1.27]
+      jumper_sw_right_a:
+        what: jumper
+        where: [scrollwheel]
+        params:
+          side: F  
+          to: undef_ENCB
+          from: ENCB
+        adjust:
+          rotate: 90
+          shift: [-2, -3.81]
+      jumper_sw_right_gnd:
+        what: jumper
+        where: [scrollwheel]
+        params:
+          side: F  
+          to: ENCA_GND
+          from: GND
+        adjust:
+          rotate: 90
+          shift: [-2, -1.27]
+      jumper_sw_right_ENCA:
+        what: jumper
+        where: [scrollwheel]
+        params:
+          side: F  
+          to: GND_ENCA
+          from: ENCA
+        adjust:
+          rotate: 90
+          shift: [-2, 1.27]
       promicro:
         what: promicro
         where: mcu
