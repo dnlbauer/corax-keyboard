@@ -142,14 +142,10 @@ outlines:
       where: true
       bound: true
       size: [px+5, py+5]
-  fillet:
-    - what: outline
-      name: raw
-      fillet: 2
   board:
     - what: polygon
       operation: stack
-      # fillet: 2
+      fillet: 2
       points:
         - ref: matrix_outer2_home
           shift: [-0.5px, -0.5py]
