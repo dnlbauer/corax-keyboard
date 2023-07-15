@@ -586,40 +586,39 @@ pcbs:
           ref.aggregate.parts: [matrix_ring_num, matrix_ring_top]
           shift: [-11, 0]
         params:
-          size: 4.7
-          drill: 4.1
+          size: 3.5
+          drill: 2.2
       screw_hole_top_right:
         what: hole
         where:
           ref.aggregate.parts: [matrix_index_num, matrix_inner_num, matrix_index_top, matrix_inner_top]
-          shift: [0, -2]
         params:
-          size: 4.7
-          drill: 4.1
+          size: 3.5
+          drill: 2.2
       screw_hole_bottom_left:
         what: hole
         where:
           ref.aggregate.parts: [matrix_outer_home, matrix_outer_bottom, matrix_pinky_home, matrix_pinky_bottom]
-          shift: [0, -1]
         params:
-          size: 4.7
-          drill: 4.1
+          size: 3.5
+          drill: 2.2
       screw_hole_bottom_right:
         what: hole
         where:
-          ref.aggregate.parts: [matrix_middle_bottom, matrix_index_bottom]
-          shift: [0, -12]
+          ref.aggregate.parts: [matrix_index_bottom, matrix_index_mod]
         params:
-          size: 4.7
-          drill: 4.1
+          size: 3.5
+          drill: 2.2
+        adjust:
+          shift: [-0.5kx, 0]
       screw_hole_thumb:
         what: hole
         where:
           ref.aggregate.parts: [thumbs_layer_cluster, thumbs_space_cluster]
-          shift: [10, 8]
+          shift: [9, 7]
         params:
-          size: 4.7
-          drill: 4.1
+          size: 3.5
+          drill: 2.2
       left_text:
         what: text
         where: matrix_middle_home
