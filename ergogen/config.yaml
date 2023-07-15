@@ -16,7 +16,7 @@ points:
   zones:
     matrix:
       # fix placement on kicad
-      anchor.shift: [125, -200]
+      anchor.shift: [50, -150]
       key:
         tags: [switch]
         padding: 1ky
@@ -38,7 +38,6 @@ points:
             mod.skip: true
           key:
             column_net: row0
-            stagger: -0.33ky
         pinky:
           rows:
             mod.skip: true
