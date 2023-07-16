@@ -25,9 +25,11 @@ points:
       columns:
         outer2:
           rows:
-            mod.skip: true
+            mod:
+              skip: true
             bottom.skip: true
             home:
+              tags: [switch_top]
               bind: [0, 5, 0, 0]
               row_net: col0
             top.skip: true
@@ -76,14 +78,19 @@ points:
       rows:
         mod:
           row_net: col4
+          tags: [switch_bottom]
         bottom:
           row_net: col3
+          tags: [switch_top]
         home:
           row_net: col2
+          tags: [switch_bottom]
         top:
           row_net: col1
+          tags: [switch_top]
         num:
           row_net: col0
+          tags: [switch_bottom]
     thumbs:
       anchor:
         ref: matrix_middle_home
@@ -184,7 +191,7 @@ pcbs:
     footprints:
       choc_hotswap:
         what: choc
-        where: [switch, switch_space]
+        where: [switch, switch_space, switch_bottom, switch_top]
         params:
           keycaps: true
           reverse: true
@@ -193,15 +200,24 @@ pcbs:
           to: "{{colrow}}"
         adjust:
           rotate: 180
-      diode:
+      diode_bottom:
         what: diode
-        where: [switch]
+        where: [switch, switch_bottom]
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
           rotate: 0
           shift: [0, -9]
+      diode_top:
+        what: diode
+        where: [switch_top]
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          rotate: 0
+          shift: [0, 5.7]
       diode_space:
         what: diode
         where: [switch_space]
@@ -211,7 +227,7 @@ pcbs:
         adjust:
           rotate: -90
           # 8.275 is exactly above the pad
-          shift: [-8.275, 1]
+          shift: [8.275, 1]
       scrollwheel:
         what: scrollwheel_mirrored
         where: [scrollwheel]
