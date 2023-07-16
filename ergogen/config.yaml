@@ -8,7 +8,8 @@ units:
   py: ky+padding
   mcu_height: 34
   mcu_width: 18
-  mcu_padding: 1
+  # distance keys to mcu
+  mcu_padding: 1.5
   scrollwheel_width: 17
   scrollwheel_height: 14
 points:
@@ -113,7 +114,7 @@ points:
         scrollwheel:
           key:
             tags: [scrollwheel]
-            shift: [kx+mcu_padding-0.75, 0]
+            shift: [kx+mcu_padding-1.25, 0]
             column_net: row5
             width: scrollwheel_width
             height: scrollwheel_height
@@ -164,11 +165,9 @@ outlines:
         - ref: matrix_inner_num
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_num
-          #shift: [0.5px+mcu_padding+mcu_width-0.9, 0.5py]  
-          shift: [0.5px+mcu_padding+mcu_width, 0.5py]  
+          shift: [0.5px+mcu_padding+mcu_width+0.25, 0.5py]  
         - ref: matrix_inner_bottom
-          #shift: [0.5px+mcu_padding+mcu_width-0.9, -0.5py]
-          shift: [0.5px+mcu_padding+mcu_width, -0.5py]
+          shift: [0.5px+mcu_padding+mcu_width+0.25, -0.5py]
         - ref: thumbs_space_cluster
           shift: [0.5px, -0.5py]
         - ref: thumbs_space_cluster
