@@ -55,7 +55,7 @@ points:
             column_net: row2
         middle:
           key:
-            stagger: 0.2ky
+            stagger: 0.33ky
             column_net: row3
           rows:
             mod:
@@ -87,7 +87,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_middle_home
-        shift: [38, -45]
+        shift: [38, -44]
       key:
         tags: [switch]
         padding: 1ky
