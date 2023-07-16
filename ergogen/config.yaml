@@ -608,6 +608,8 @@ pcbs:
         params:
           size: 3.5
           drill: 2.2
+        adjust:
+          shift: [0, -1]
       screw_hole_bottom_left:
         what: hole
         where:
