@@ -50,7 +50,7 @@ points:
             mod.skip: true
           key:
             origin: [0, 8]
-            stagger: 0.33ky
+            stagger: 0.66ky
             splay: -5
             column_net: row2
         middle:
