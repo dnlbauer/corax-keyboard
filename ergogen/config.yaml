@@ -12,6 +12,10 @@ units:
   mcu_padding: 1.5
   scrollwheel_width: 17
   scrollwheel_height: 14
+  screw_diameter: 4.7
+  screw_hole: 4.1
+  screen_screw_diameter: 4
+  screen_screw_hole: 2.2
 points:
   rotate: 5
   zones:
@@ -565,16 +569,16 @@ pcbs:
         what: hole
         where: mcu
         params:
-          size: 3.5
-          drill: 2.2
+          size: screen_screw_diameter
+          drill: screen_screw_hole
         adjust:
           shift: [10+mcu_height/2, -mcu_width/2+1.5]
       plexi_outer:
         what: hole
         where: mcu
         params:
-          size: 3.5
-          drill: 2.2
+          size: screen_screw_diameter
+          drill: screen_screw_hole
         adjust:
           shift: [10+mcu_height/2, mcu_width/2-1.5]
       screw_hole_top_left:
@@ -583,15 +587,15 @@ pcbs:
           ref.aggregate.parts: [matrix_ring_num, matrix_ring_top]
           shift: [-11, 0]
         params:
-          size: 3.5
-          drill: 2.2
+          size: screw_diameter
+          drill: screw_hole
       screw_hole_top_right:
         what: hole
         where:
           ref.aggregate.parts: [matrix_index_num, matrix_inner_num, matrix_index_top, matrix_inner_top]
         params:
-          size: 3.5
-          drill: 2.2
+          size: screw_diameter
+          drill: screw_hole
         adjust:
           shift: [0, -1]
       screw_hole_bottom_left:
@@ -599,15 +603,15 @@ pcbs:
         where:
           ref.aggregate.parts: [matrix_outer_home, matrix_outer_bottom, matrix_pinky_home, matrix_pinky_bottom]
         params:
-          size: 3.5
-          drill: 2.2
+          size: screw_diameter
+          drill: screw_hole
       screw_hole_bottom_right:
         what: hole
         where:
           ref.aggregate.parts: [matrix_index_bottom, matrix_index_mod]
         params:
-          size: 3.5
-          drill: 2.2
+          size: screw_diameter
+          drill: screw_hole
         adjust:
           shift: [-0.5kx, 0]
       screw_hole_thumb:
@@ -616,8 +620,8 @@ pcbs:
           ref.aggregate.parts: [thumbs_layer_cluster, thumbs_space_cluster]
           shift: [9, 7]
         params:
-          size: 3.5
-          drill: 2.2
+          size: screw_diameter
+          drill: screw_hole
       left_text:
         what: text
         where: matrix_middle_home
