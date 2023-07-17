@@ -1,5 +1,7 @@
 # Project: Build a keyboard
 
+!! This is a work-in-progress !!
+
 -> [schematics](docs/schematic.md)
 
 ## Preview
