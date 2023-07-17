@@ -53,6 +53,7 @@ module.exports = {
       (fp_line (start 15.24 8.89) (end 15.24 -8.89) (layer F.SilkS) (width 0.15))
       (fp_line (start 15.24 -8.89) (end -17.78 -8.89) (layer F.SilkS) (width 0.15))
       (fp_line (start -17.78 -8.89) (end -17.78 8.89) (layer F.SilkS) (width 0.15))
+
       `
     function pins(def_neg, def_pos) {
       return `
@@ -100,6 +101,14 @@ module.exports = {
         (fp_text user row3 (at 8.89 ${def_neg}6.3 ${p.rot + 90}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left mirror)))
         (fp_text user row4 (at 11.43 ${def_neg}6.3 ${p.rot + 90}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left mirror)))
         (fp_text user row5 (at 13.97 ${def_neg}6.3 ${p.rot + 90}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left mirror)))
+
+        ${'' /* description */}
+        (fp_text user "Nice!Nano" (at 3 ${def_pos}1.2 ${p.rot}) (layer F.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user "Place face down." (at 3 ${def_pos}-0.55 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user "Solder jumpers on back." (at 3 ${def_pos}-1.8 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user "Nice!Nano" (at 3 ${def_pos}1.2 ${p.rot}) (layer B.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
+        (fp_text user "Place face down." (at 3 ${def_pos}-0.55 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
+        (fp_text user "Solder jumpers on back." (at 3 ${def_pos}-1.8 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
       
         ${''/* and now the actual pins */}
         (pad 1 thru_hole circle (at -13.97 ${def_pos}7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.RAW.str})

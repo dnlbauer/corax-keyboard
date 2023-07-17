@@ -255,7 +255,7 @@ pcbs:
           from: ENCB
         adjust:
           rotate: 90
-          shift: [-2, 3.81]
+          shift: [-3, 3.81]
       jumper_sw_left_gnd:
         what: jumper
         where: [scrollwheel]
@@ -265,7 +265,7 @@ pcbs:
           from: GND
         adjust:
           rotate: 90
-          shift: [-2, 1.27]
+          shift: [-3, 1.27]
       jumper_sw_left_ENCA:
         what: jumper
         where: [scrollwheel]
@@ -275,7 +275,7 @@ pcbs:
           from: ENCA
         adjust:
           rotate: 90
-          shift: [-2, -1.27]
+          shift: [-3, -1.27]
       jumper_sw_right_a:
         what: jumper
         where: [scrollwheel]
@@ -285,7 +285,7 @@ pcbs:
           from: ENCB
         adjust:
           rotate: 90
-          shift: [-2, -3.81]
+          shift: [-3, -3.81]
       jumper_sw_right_gnd:
         what: jumper
         where: [scrollwheel]
@@ -295,7 +295,7 @@ pcbs:
           from: GND
         adjust:
           rotate: 90
-          shift: [-2, -1.27]
+          shift: [-3, -1.27]
       jumper_sw_right_ENCA:
         what: jumper
         where: [scrollwheel]
@@ -305,9 +305,9 @@ pcbs:
           from: ENCA
         adjust:
           rotate: 90
-          shift: [-2, 1.27]
-      promicro:
-        what: promicro
+          shift: [-3, 1.27]
+      nicenano:
+        what: nicenano
         where: mcu
         params:
           orientation: down
@@ -335,22 +335,6 @@ pcbs:
           P7: col2
           P8: col3
           P9: col4
-      jumper_text_left:
-        what: text
-        where: mcu
-        params:
-          side: "F"
-          text: "Place Nice!Nano face down &\\nsolder jumpers on the back side."
-        adjust:
-          rotate: 90
-      jumper_text_right:
-        what: text
-        where: mcu
-        params:
-          side: "B"
-          text: "Place Nice!Nano face down &\\nsolder jumpers on the back side."
-        adjust:
-          rotate: 90
       jumper_left_raw:
         what: jumper
         where: mcu
@@ -641,6 +625,7 @@ pcbs:
           text: "Left Hand Front"
           side: F
           knockout: true
+          fontsize: 1.4
         adjust:
           shift: [0, 4]
           rotate: 90
@@ -651,6 +636,7 @@ pcbs:
           text: "Right Hand Front"
           side: B
           knockout: true
+          fontsize: 1.4
         adjust:
           rotate: 90
           shift: [0, 4]
