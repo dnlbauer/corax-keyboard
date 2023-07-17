@@ -1,7 +1,9 @@
 # Project: Build a keyboard
 
+-> [schematics](docs/schematic.md)
+
 ## Preview
-![prototyp}e](images/prototype.jpeg)
+![prototyp}e](./images/prototype.jpeg)
 
 ![kicad image](images/kicad.jpeg)
 
