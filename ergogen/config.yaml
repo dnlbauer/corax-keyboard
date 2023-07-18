@@ -17,8 +17,8 @@ units:
   screen_screw_diameter: 4
   screen_screw_hole: 2.2
   switchplate_switch_cutout: 14
-  switchplate_scrollwheel_cutout_x: 17
-  switchplate_scrollwheel_cutout_y: 14
+  switchplate_scrollwheel_cutout_x: 17.5
+  switchplate_scrollwheel_cutout_y: 14.5
   switchplate_screw_diameter: 3.3
   switchplate_screw_hole: 2.2
 points:
@@ -229,9 +229,9 @@ outlines:
         - ref: matrix_inner_num
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_bottom
-          shift: [0.5px, 0.5py+2]
+          shift: [0.5px, 0.5py+1.5]
         - ref: matrix_inner_bottom
-          shift: [0.5px+mcu_padding+mcu_width+0.25, 0.5py+2]  
+          shift: [0.5px+mcu_padding+mcu_width+0.25, 0.5py+1.5]  
         - ref: matrix_inner_bottom
           shift: [0.5px+mcu_padding+mcu_width+0.25, -0.5py]
         - ref: thumbs_space_cluster

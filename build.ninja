@@ -1,6 +1,6 @@
 rule ergogen
   command = ergogen $infolder -o $outfolder
 
-build pcb/pcbs/keyboard.kicad_pcb: ergogen
+build pcb/pcbs/keyboard.kicad_pcb pcb/pcbs/switchplate.kicad_pcb: ergogen
   infolder = ./ergogen
   outfolder = ./pcb
