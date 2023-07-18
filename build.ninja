@@ -1,6 +1,18 @@
 rule ergogen
+  description = Build kicad files
   command = ergogen $infolder -o $outfolder
+
+rule stepfile
+  description = Create stepfile
+  command = kicad-cli pcb export step $in -o $out
+
+rule stepfile1.2
+  description = Create a stepfile with a board height of 1.2 mm
+  command = kicad-cli pcb export step $in -o $out && sed -i -e "s/1\.6)/1.2)/g" $out
 
 build pcb/pcbs/keyboard.kicad_pcb pcb/pcbs/switchplate.kicad_pcb: ergogen
   infolder = ./ergogen
   outfolder = ./pcb
+
+build pcb/pcbs/switchplate.step: stepfile1.2 pcb/pcbs/switchplate.kicad_pcb
+build pcb/pcbs/keyboard.step: stepfile pcb/pcbs/keyboard.kicad_pcb
