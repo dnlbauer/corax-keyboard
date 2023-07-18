@@ -167,16 +167,6 @@ points:
         shift: [9, 7]
       columns.screw.key.tags: [screw]
 outlines:
-  keys:
-    - what: rectangle
-      where: true
-      fillet: 2
-      size: [mbkx, mbky]
-  raw:
-    - what: rectangle
-      where: true
-      bound: true
-      size: [px+5, py+5]
   board:
     - what: polygon
       operation: stack
