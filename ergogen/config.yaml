@@ -529,24 +529,15 @@ pcbs:
         adjust:
           shift: [20.50-2.5, -5.08]
           rotate: -90
-      slider_f:
-        what: slider
+      slider:
+        what: slider_reversible
         where: mcu
         adjust:
           shift: [-17.1, 0]
           rotate: 90
         params:
           side: F
-          from: switch_from
-          to: RAW
-      slider_b:
-        what: slider
-        where: mcu
-        adjust:
-          shift: [-17.1, 0]
-          rotate: 90
-        params:
-          side: B
+          reverse: true
           from: switch_from
           to: RAW
       battery:
