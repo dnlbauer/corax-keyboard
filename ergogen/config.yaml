@@ -143,6 +143,29 @@ points:
             height: mcu_width
             rotate: -90
             shift: [kx+mcu_padding, -mcu_width/2-0.3]
+    screw_top_left:
+      anchor:
+        ref.aggregate.parts: [matrix_ring_num, matrix_ring_top]
+        shift: [-11, 0]
+      columns.screw.key.tags: [screw]
+    screw_top_right:
+      anchor:
+        ref.aggregate.parts: [matrix_index_num, matrix_inner_num, matrix_index_top, matrix_inner_top]
+      columns.screw.key.tags: [screw]
+    screw_bottom_left:
+      anchor:
+        ref.aggregate.parts: [matrix_outer_home, matrix_outer_bottom, matrix_pinky_home, matrix_pinky_bottom]
+      columns.screw.key.tags: [screw]
+    screw_bottom_right:
+      anchor:
+        ref.aggregate.parts: [matrix_index_bottom, matrix_index_mod]
+        shift: [-0.5kx, 0]
+      columns.screw.key.tags: [screw]
+    screw_thumb:
+      anchor:
+        ref.aggregate.parts: [thumbs_layer_cluster, thumbs_space_cluster]
+        shift: [9, 7]
+      columns.screw.key.tags: [screw]
 outlines:
   keys:
     - what: rectangle
@@ -572,44 +595,9 @@ pcbs:
           drill: screen_screw_hole
         adjust:
           shift: [10+mcu_height/2, mcu_width/2-1.5]
-      screw_hole_top_left:
+      screw_holes:
         what: hole
-        where:
-          ref.aggregate.parts: [matrix_ring_num, matrix_ring_top]
-          shift: [-11, 0]
-        params:
-          size: screw_diameter
-          drill: screw_hole
-      screw_hole_top_right:
-        what: hole
-        where:
-          ref.aggregate.parts: [matrix_index_num, matrix_inner_num, matrix_index_top, matrix_inner_top]
-        params:
-          size: screw_diameter
-          drill: screw_hole
-        adjust:
-          shift: [0, -1]
-      screw_hole_bottom_left:
-        what: hole
-        where:
-          ref.aggregate.parts: [matrix_outer_home, matrix_outer_bottom, matrix_pinky_home, matrix_pinky_bottom]
-        params:
-          size: screw_diameter
-          drill: screw_hole
-      screw_hole_bottom_right:
-        what: hole
-        where:
-          ref.aggregate.parts: [matrix_index_bottom, matrix_index_mod]
-        params:
-          size: screw_diameter
-          drill: screw_hole
-        adjust:
-          shift: [-0.5kx, 0]
-      screw_hole_thumb:
-        what: hole
-        where:
-          ref.aggregate.parts: [thumbs_layer_cluster, thumbs_space_cluster]
-          shift: [9, 7]
+        where: [screw]
         params:
           size: screw_diameter
           drill: screw_hole
