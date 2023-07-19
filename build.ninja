@@ -14,5 +14,25 @@ build pcb/pcbs/keyboard.kicad_pcb pcb/pcbs/switchplate.kicad_pcb: ergogen
   infolder = ./ergogen
   outfolder = ./pcb
 
+pool kicad_pool
+  depth = 1
+
+rule drill
+  description = Create drill files and drill map
+  command = kicad-cli pcb export drill --generate-map --map-format gerberx2 --excellon-separate-th $in -o $outfolder
+  pool = kicad_pool
+
+rule gerbers
+  description = Create gerber files
+  command = kicad-cli pcb export gerbers --subtract-soldermask  -l $layer $in -o $outfolder
+  pool = kicad_pool
+
 build pcb/pcbs/switchplate.step: stepfile1.2 pcb/pcbs/switchplate.kicad_pcb
+
 build pcb/pcbs/keyboard.step: stepfile pcb/pcbs/keyboard.kicad_pcb
+
+build gerbers/keyboard-PTH.drl gerbers/keyboard-NPTH.drl: drill pcb/pcbs/keyboard.kicad_pcb
+  outfolder = ./gerbers/
+build gerbers/keyboard-F_CU.gbr: gerbers pcb/pcbs/keyboard.kicad_pcb
+  layer = "F.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts"
+  outfolder = ./gerbers/
