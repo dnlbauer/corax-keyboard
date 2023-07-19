@@ -227,11 +227,11 @@ outlines:
         - ref: matrix_middle_num
           shift: [0.5px, 0.5py]
         - ref: matrix_inner_num
-          shift: [0.5px, 0.5py]
+          shift: [0.5px-0.5, 0.5py]
         - ref: matrix_inner_bottom
-          shift: [0.5px, 0.5py+1.5]
+          shift: [0.5px-0.5, 0.5py+2.5]
         - ref: matrix_inner_bottom
-          shift: [0.5px+mcu_padding+mcu_width+0.25, 0.5py+1.5]  
+          shift: [0.5px+mcu_padding+mcu_width+0.25, 0.5py+2.5]  
         - ref: matrix_inner_bottom
           shift: [0.5px+mcu_padding+mcu_width+0.25, -0.5py]
         - ref: thumbs_space_cluster
