@@ -6,3 +6,6 @@ fp-info-cache
 *-backups
 *.kicad_prl
 *.lck
+
+# zmk firmware binaries
+# *.uf2

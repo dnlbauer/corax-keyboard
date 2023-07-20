@@ -1,0 +1,14 @@
+file_format: "1"
+id: ownkb
+name: SplitKeyboard
+type: shield
+url: https://github.com/dnlbauer/splitkeyboard
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+siblings:
+  - ownkb_left
+  - ownkb_right
