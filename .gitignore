@@ -8,4 +8,4 @@ fp-info-cache
 *.lck
 
 # zmk firmware binaries
-# *.uf2
+*.uf2
