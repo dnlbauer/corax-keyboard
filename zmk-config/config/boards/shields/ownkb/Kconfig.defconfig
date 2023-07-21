@@ -16,6 +16,4 @@ if SHIELD_OWNKB_LEFT || SHIELD_OWNKB_RIGHT
 config ZMK_SPLIT
     default y
 
-# TODO add support for normal OLED
-
 endif

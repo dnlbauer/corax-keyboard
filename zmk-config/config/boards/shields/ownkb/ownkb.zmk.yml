@@ -6,7 +6,6 @@ url: https://github.com/dnlbauer/splitkeyboard
 requires: [pro_micro]
 features:
   - keys
-#  - display  TODO remove?
 #  - encoder  TODO use
 siblings:
   - ownkb_left
