@@ -1,0 +1,12 @@
+file_format: "1"
+id: ownkb
+name: ownkb
+type: shield
+url: https://github.com/dnlbauer/splitkeyboard
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
+siblings:
+  - ownkb_left
+  - ownkb_right
