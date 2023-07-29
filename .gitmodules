@@ -1,3 +1,4 @@
 [submodule "zmk-config"]
 	path = zmk-config
 	url = git@github.com:dnlbauer/spitkeyboard-zmk-config.git
+	branch = main
