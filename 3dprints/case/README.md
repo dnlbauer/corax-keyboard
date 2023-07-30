@@ -4,8 +4,9 @@ Designed to hold 4 10x1mm magnets to hold the two halves together for transport.
 
 ## Preview
 
-| | |
-| ![top](../../images/case_top.png) | [front](../../images/case_front.png) |
+| Top | Front |
+|-----|-------|
+| ![top](../../images/case_top.png) | ![front](../../images/case_front.png) |
 
 ## Printing
 

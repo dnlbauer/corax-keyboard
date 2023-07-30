@@ -47,8 +47,8 @@ A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 |---------------------------------|-----------|----------|
 | Nice!View + mounts              | 2         |          |
 | Switchplate                     | 2         | Height: 1.2mm; either 3d printed or cut pcbs. [stl](./3dprints/switchplate/) |
+| Case (Left + Right)             | 1         | see [here](./3dprints/case/).   |
 | Silicone feet                   | 8         |          |
-| Case (Left + Right)             | 1         | [stls](./3dprints/case/README.md)   |
 
 ## Firmware
 
