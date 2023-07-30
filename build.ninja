@@ -1,6 +1,16 @@
+#ergogen
 rule ergogen
   description = Build kicad files
   command = ergogen $infolder -o $outfolder
+
+#build pcbs/pcbs/keyboard.kicad_pcb pcbs/pcbs/switchplate.kicad_pcb: ergogen
+#  infolder = ./ergogen
+#  outfolder = ./pcb
+
+# kicad
+# limit paralell jobs because kicad locks file access
+pool kicad_pool
+  depth = 1
 
 rule stepfile
   description = Create stepfile
@@ -10,13 +20,9 @@ rule stepfile1.2
   description = Create a stepfile with a board height of 1.2 mm
   command = kicad-cli pcb export step $in -o $out && sed -i -e "s/1\.6)/1.2)/g" $out
 
-build pcb/pcbs/keyboard.kicad_pcb pcb/pcbs/switchplate.kicad_pcb: ergogen
-  infolder = ./ergogen
-  outfolder = ./pcb
+build 3dprints/switchplate/switchplate.step: stepfile1.2 pcbs/pcbs/switchplate.kicad_pcb
 
-pool kicad_pool
-  depth = 1
-
+# gerbers
 rule drill
   description = Create drill files and drill map
   command = kicad-cli pcb export drill --generate-map --map-format gerberx2 --excellon-separate-th $in -o $outfolder
@@ -27,12 +33,15 @@ rule gerbers
   command = kicad-cli pcb export gerbers --subtract-soldermask  -l $layer $in -o $outfolder
   pool = kicad_pool
 
-build pcb/pcbs/switchplate.step: stepfile1.2 pcb/pcbs/switchplate.kicad_pcb
-
-build pcb/pcbs/keyboard.step: stepfile pcb/pcbs/keyboard.kicad_pcb
-
-build gerbers/keyboard-PTH.drl gerbers/keyboard-NPTH.drl: drill pcb/pcbs/keyboard.kicad_pcb
+build gerbers/keyboard-PTH.drl gerbers/keyboard-NPTH.drl gerbers/keyboard-NPTH-drl_map.gbr gerbers/keyboard-PTH-drl_map.gbr: drill pcbs/pcbs/keyboard.kicad_pcb
   outfolder = ./gerbers/
-build gerbers/keyboard-F_CU.gbr: gerbers pcb/pcbs/keyboard.kicad_pcb
+
+build gerbers/keyboard-B_Cu.gbl gerbers/keyboard-B_Mask.gbs gerbers/keyboard-B_Paste.gbp gerbers/keyboard-B_Silkscreen.gbo gerbers/keyboard-Edge_Cuts.gm1 gerbers/keyboard-F_Cu.gtl gerbers/keyboard-F_Mask.gts gerbers/keyboard-F_Paste.gtp gerbers/keyboard-F_Silkscreen.gto gerbers/keyboard-job.gbrjob: gerbers pcbs/pcbs/keyboard.kicad_pcb
   layer = "F.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts"
   outfolder = ./gerbers/
+
+rule zip
+  description = zip files together
+  command = zip $out $in
+
+build gerbers.zip: zip gerbers/keyboard-B_Cu.gbl gerbers/keyboard-B_Mask.gbs gerbers/keyboard-B_Paste.gbp gerbers/keyboard-B_Silkscreen.gbo gerbers/keyboard-Edge_Cuts.gm1 gerbers/keyboard-F_Cu.gtl gerbers/keyboard-F_Mask.gts gerbers/keyboard-F_Paste.gtp gerbers/keyboard-F_Silkscreen.gto gerbers/keyboard-job.gbrjob gerbers/keyboard-NPTH.drl gerbers/keyboard-NPTH-drl_map.gbr gerbers/keyboard-PTH.drl gerbers/keyboard-PTH-drl_map.gbr
