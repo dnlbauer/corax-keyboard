@@ -1,10 +1,12 @@
 output
+
+# ninja tmp files
 .ninja*
 
 # kicad tmp files
-fp-info-cache
-*-backups
-*.kicad_prl
+pcbs/pcbs/fp-info-cache
+pcbs/pcbs/*-backups
+pcb/pcbs/*.kicad_prl
 *.lck
 
 # zmk firmware binaries
