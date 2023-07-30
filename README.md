@@ -46,8 +46,9 @@ A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 | **Item**                        | **Count** | **Note** |
 |---------------------------------|-----------|----------|
 | Nice!View + mounts              | 2         |          |
-| Switchplate                     | 2         | Height: 1.2mm; either 3d printed or cut pcbs |
+| Switchplate                     | 2         | Height: 1.2mm; either 3d printed or cut pcbs. [stl](./3dprints/switchplate/) |
 | Silicone feet                   | 8         |          |
+| Case (Left + Right)             | 1         | [stls](./3dprints/case/README.md)   |
 
 ## Firmware
 
@@ -61,5 +62,4 @@ TODO
 - [ ] Increase diode-socket distance.
 - [ ] Fix MCU pin labels on right-front (Some are mirrored / not on the correct side of the MCU).
 - [ ] Give this project a **name**.
-- [ ] Design a case.
 - [ ] Use github actions to build + release gerber files.

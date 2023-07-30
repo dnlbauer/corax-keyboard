@@ -253,7 +253,11 @@ outlines:
     - what: rectangle
       where: [scrollwheel]
       size: [switchplate_scrollwheel_cutout_x, switchplate_scrollwheel_cutout_y]
-      bound: false    
+      bound: false
+  _screw_holes:
+    - what: circle
+      where: [screw]
+      radius: 0.5switchplate_screw_hole
   switchplate:
     - what: outline
       name: _switchplate_base
@@ -263,6 +267,12 @@ outlines:
     - what: outline
       name: _scrollwheel_cutout
       operation: subtract
+  case:
+    - what: outline
+      name: board
+    - what: outline
+      name: _screw_holes
+      operation: subtract  
 pcbs:
   keyboard:
     outlines.main.outline: board
