@@ -16,8 +16,11 @@ A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 
 ## Gallery
 
-![prototype](./images/build.jpg)
 ![kicad image](images/pcb.png)
+![prototype](./images/build.jpg)
+![top](./images/top.jpg)
+![mcu](./images/mcu.jpg)
+![front](./images/front.jpg)
 
 ## Bill of materials
 **Essentials**:
