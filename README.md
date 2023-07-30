@@ -44,3 +44,18 @@ A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 | Nice!View + mounts              | 2         |          |
 | Switchplate                     | 2         | Height: 1.2mm; either 3d printed or cut pcbs |
 | Silicone feet                   | 8         |          |
+
+## Firmware
+
+Only supports ZMK. The firmware repository can be found here: [https://github.com/dnlbauer/splitkeyboard-zmk-config](https://github.com/dnlbauer/splitkeyboard-zmk-config).
+
+## Build guide
+
+TODO
+
+## TODO List
+- [ ] Increase diode-socket distance.
+- [ ] Fix MCU pin labels on right-front (Some are mirrored / not on the correct side of the MCU).
+- [ ] Give this project a **name**.
+- [ ] Design a case.
+- [ ] Use github actions to build + release gerber files.
