@@ -11,3 +11,5 @@ pcb/pcbs/*.kicad_prl
 
 # zmk firmware binaries
 *.uf2
+
+*.zip
