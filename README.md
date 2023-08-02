@@ -4,6 +4,15 @@
 
 A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 
+## Gallery
+
+![top](./images/top.jpg)
+![top](./images/top2.jpg)
+![mcu1](./images/mcu1.jpg)
+![mcu2](./images/mcu2.jpg)
+![case](./images/magnetic_case.jpg)
+![pcb](./images/pcb.jpg)
+
 ## Features
 
 - Choc-spaced, hot-swappable
@@ -13,15 +22,6 @@ A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 - Fully wireless built for Nice!Nano + ZMK (no TRRS Jack)
 - Nice!View support (5 pin connector)
 - Reversible PCB
-
-## Gallery
-
-![kicad image](images/pcb.png)
-![prototype](./images/build.jpg)
-![top](./images/top.jpg)
-![mcu](./images/mcu.jpg)
-![front](./images/front.jpg)
-![back](./images/back.jpg)
 
 ## Bill of materials
 **Essentials**:
