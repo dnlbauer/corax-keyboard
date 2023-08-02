@@ -13,10 +13,13 @@ Designed to hold 4 10x1mm magnets to hold the two halves together for transport.
 | Item | Count | Note |
 |------|-------|------|
 | Printed case left + right | 1 | |
+| Printed MCU cover | 1 |
 | Magnets | 8 | round, 10x1mm |
-| Screws | 10 | M2*6 |
+| Case screws | 10 | M2*6 |
 | Threaded inserts | 10 | M2*3 |
 | Silicone feet | 8 | |
+| Threaded brass standoffs | 4 | 10mm, M2 |
+| MCU Cover screws | 8 | M2*4 |
 
 ## Printing
 
