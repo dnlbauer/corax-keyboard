@@ -51,7 +51,7 @@
 
 ## Firmware
 
-Only supports ZMK. The firmware repository can be found here: [https://github.com/dnlbauer/splitkeyboard-zmk-config](https://github.com/dnlbauer/splitkeyboard-zmk-config).
+Only supports ZMK. The firmware repository can be found here: [https://github.com/dnlbauer/corax56-zmk-config](https://github.com/dnlbauer/corax56-zmk-config).
 
 ## Build guide
 
