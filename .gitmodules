@@ -1,4 +1,4 @@
 [submodule "zmk-config"]
 	path = zmk-config
-	url = git@github.com:dnlbauer/spitkeyboard-zmk-config.git
+	url = git@github.com:dnlbauer/corax56-zmk-config.git
 	branch = main
