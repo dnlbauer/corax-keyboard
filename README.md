@@ -1,8 +1,12 @@
-# Project: Build a split keyboard
+# Corax56: A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 
-**⚠ This is still a work-in-progress ⚠**
-
-A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
+- Choc-spaced, hot-swappable
+- 56 keys (4 thumb keys, 4 key pinky cluster)
+- Scrollwheel (EVQWGD001) on both sides
+- Strong pinky stagger (0.66) and a 5 deg. pinky splay
+- Fully wireless built for Nice!Nano + ZMK (no TRRS Jack)
+- Nice!View support (5 pin connector)
+- Reversible PCB
 
 ## Gallery
 
@@ -15,13 +19,7 @@ A 56 keys column-staggered fully-wireless split keyboard with scrollwheels.
 
 ## Features
 
-- Choc-spaced, hot-swappable
-- 56 keys (4 thumb keys, 4 key pinky cluster)
-- Scrollwheel (EVQWGD001) on both sides
-- Strong pinky stagger (0.66) and a 5 deg. pinky splay
-- Fully wireless built for Nice!Nano + ZMK (no TRRS Jack)
-- Nice!View support (5 pin connector)
-- Reversible PCB
+
 
 ## Bill of materials
 **Essentials**:
