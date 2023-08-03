@@ -7,6 +7,7 @@
 - Fully wireless built for Nice!Nano + ZMK (no TRRS Jack)
 - Nice!View support (5 pin connector)
 - Reversible PCB
+- 3d printable magnetic case, switchplate and MCU cover 
 
 ## Gallery
 
