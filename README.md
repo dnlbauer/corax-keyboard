@@ -63,3 +63,8 @@ TODO
 - [ ] Fix MCU pin labels on right-front (Some are mirrored / not on the correct side of the MCU).
 - [ ] Give this project a **name**.
 - [ ] Use github actions to build + release gerber files.
+
+## Standing on the shoulders of giants
+
+- A great tutorial I referenced a lot by FlatFootFox: https://flatfootfox.com/ergogen-introduction/
+- Lots of inspiration and ideas for this project came from these boards: [Choccy](https://github.com/sprengboard/choccy), [Sofle](https://github.com/josefadamcik/SofleKeyboard), [brain](https://github.com/Wesztman/brain), [spleeb](https://github.com/chrishoage/spleeb)
