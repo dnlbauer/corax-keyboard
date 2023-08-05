@@ -296,7 +296,7 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           rotate: 0
-          shift: [0, -9]
+          shift: [0, -9.5]
       diode_top:
         what: diode
         where: [switch_top]
@@ -305,7 +305,7 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           rotate: 0
-          shift: [0, 5.7]
+          shift: [0, 5.2]
       diode_space:
         what: diode
         where: [switch_space]
@@ -669,7 +669,7 @@ pcbs:
           text: "Left Hand Front"
           side: F
           knockout: true
-          fontsize: 1.4
+          fontsize: 1.6
         adjust:
           shift: [0, 4]
           rotate: 90
@@ -680,10 +680,36 @@ pcbs:
           text: "Right Hand Front"
           side: B
           knockout: true
-          fontsize: 1.4
+          fontsize: 1.6
         adjust:
           rotate: 90
           shift: [0, 4]
+      order_number_text:
+        what: text
+        where: [switch_space]
+        params:
+          side: B
+          text: "JLCJLCJLCJLC"
+        adjust:
+          rotate: 10
+          shift: [-9.5, 10]
+      name_text:
+        what: text
+        where: matrix_middle_mod
+        params:
+          text: "Corax56 rev. 1.1"
+        adjust:
+          rotate: 82
+          shift: [-9, -11]
+      name_text_right:
+        what: text
+        where: matrix_middle_mod
+        params:
+          side: B
+          text: "Corax56 rev. 1.1"
+        adjust:
+          rotate: 82
+          shift: [-9, -11]
   switchplate:
     outlines.main.outline: switchplate
     footprints:
