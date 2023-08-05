@@ -49,8 +49,8 @@ module.exports = {
         (fp_line (start 8.4 -7.4) (end -8.4 -7.4) (layer B.SilkS) (width 0.12))
         (fp_line (start -8.4 -7.4) (end -8.4 6.4) (layer B.SilkS) (width 0.12))
 
-        (fp_text user "Scrollwheel" (at 0 0 ${p.rot + 90}) (layer F.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user "EVQWGD001" (at 1.75 0 ${p.rot + 90}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user "Scrollwheel" (at 0 0 ${p.rot + 90}) (layer F.SilkS knockout) (effects (font (size 1.0 1.0) (thickness 0.15))))
+        (fp_text user "EVQWGD001" (at 1.75 0 ${p.rot + 90}) (layer F.SilkS) (effects (font (size 1.0 1.0) (thickness 0.15))))
 
       `
       function pins(def_neg, def_pos) {

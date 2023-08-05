@@ -669,7 +669,7 @@ pcbs:
           text: "Left Hand Front"
           side: F
           knockout: true
-          fontsize: 1.4
+          fontsize: 1.6
         adjust:
           shift: [0, 4]
           rotate: 90
@@ -680,7 +680,7 @@ pcbs:
           text: "Right Hand Front"
           side: B
           knockout: true
-          fontsize: 1.4
+          fontsize: 1.6
         adjust:
           rotate: 90
           shift: [0, 4]

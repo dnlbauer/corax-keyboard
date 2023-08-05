@@ -46,8 +46,8 @@ module.exports = {
               (fp_line (start 1.25 -6.5) (end -1.25 -6.5) (layer F.SilkS) (width 0.15))
 
               ${'' /* labels */}
-              (fp_text user Nice!View (at -2.5 0.00 ${p.rot+90}) (layer F.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15))))
-              (fp_text user Nice!View (at -2.5 0.00 ${p.rot+90}) (layer B.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
+              (fp_text user Nice!View (at -2.5 0.00 ${p.rot+90}) (layer F.SilkS knockout) (effects (font (size 1.0 1.0) (thickness 0.15))))
+              (fp_text user Nice!View (at -2.5 0.00 ${p.rot+90}) (layer B.SilkS knockout) (effects (font (size 1.0 1.0) (thickness 0.15)) (justify mirror)))
 
               `
         }

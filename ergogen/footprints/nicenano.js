@@ -8,30 +8,30 @@ module.exports = {
   params: {
     designator: 'MCU',
     orientation: 'down',
-    RAW: {type: 'net', value: 'RAW'},
-    GND1: {type: 'net', value: 'GND'},
-    RST: {type: 'net', value: 'RST'},
-    VCC: {type: 'net', value: 'VCC'},
-    P21: {type: 'net', value: 'P21'},
-    P20: {type: 'net', value: 'P20'},
-    P19: {type: 'net', value: 'P19'},
-    P18: {type: 'net', value: 'P18'},
-    P15: {type: 'net', value: 'P15'},
-    P14: {type: 'net', value: 'P14'},
-    P16: {type: 'net', value: 'P16'},
-    P10: {type: 'net', value: 'P10'},
-    P1: {type: 'net', value: 'P1'},
-    P0: {type: 'net', value: 'P0'},
-    GND2: {type: 'net', value: 'GND'},
-    GND3: {type: 'net', value: 'GND'},
-    P2: {type: 'net', value: 'P2'},
-    P3: {type: 'net', value: 'P3'},
-    P4: {type: 'net', value: 'P4'},
-    P5: {type: 'net', value: 'P5'},
-    P6: {type: 'net', value: 'P6'},
-    P7: {type: 'net', value: 'P7'},
-    P8: {type: 'net', value: 'P8'},
-    P9: {type: 'net', value: 'P9'}
+    RAW: { type: 'net', value: 'RAW' },
+    GND1: { type: 'net', value: 'GND' },
+    RST: { type: 'net', value: 'RST' },
+    VCC: { type: 'net', value: 'VCC' },
+    P21: { type: 'net', value: 'P21' },
+    P20: { type: 'net', value: 'P20' },
+    P19: { type: 'net', value: 'P19' },
+    P18: { type: 'net', value: 'P18' },
+    P15: { type: 'net', value: 'P15' },
+    P14: { type: 'net', value: 'P14' },
+    P16: { type: 'net', value: 'P16' },
+    P10: { type: 'net', value: 'P10' },
+    P1: { type: 'net', value: 'P1' },
+    P0: { type: 'net', value: 'P0' },
+    GND2: { type: 'net', value: 'GND' },
+    GND3: { type: 'net', value: 'GND' },
+    P2: { type: 'net', value: 'P2' },
+    P3: { type: 'net', value: 'P3' },
+    P4: { type: 'net', value: 'P4' },
+    P5: { type: 'net', value: 'P5' },
+    P6: { type: 'net', value: 'P6' },
+    P7: { type: 'net', value: 'P7' },
+    P8: { type: 'net', value: 'P8' },
+    P9: { type: 'net', value: 'P9' }
   },
   body: p => {
     const standard = `
@@ -103,12 +103,12 @@ module.exports = {
         (fp_text user col4 (at 13.97 ${def_neg}6.3 ${p.rot + 90}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left mirror)))
 
         ${'' /* description */}
-        (fp_text user "Nice!Nano" (at 3 ${def_pos}1.2 ${p.rot}) (layer F.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user "Place face down." (at 3 ${def_pos}-0.55 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user "Solder jumpers on back." (at 3 ${def_pos}-1.8 ${p.rot}) (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user "Nice!Nano" (at 3 ${def_pos}1.2 ${p.rot}) (layer B.SilkS knockout) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
-        (fp_text user "Place face down." (at 3 ${def_pos}-0.55 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
-        (fp_text user "Solder jumpers on back." (at 3 ${def_pos}-1.8 ${p.rot}) (layer B.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror)))
+        (fp_text user "Nice!Nano" (at 3.7 ${def_pos}1.2 ${p.rot}) (layer F.SilkS knockout) (effects (font (size 1.0 1.0) (thickness 0.15))))
+        (fp_text user "Place face down." (at 3.7 ${def_pos}-0.55 ${p.rot}) (layer F.SilkS) (effects (font (size 1.0 1.0) (thickness 0.15))))
+        (fp_text user "Solder jumpers on back." (at 3.7 ${def_pos}-1.8 ${p.rot}) (layer F.SilkS) (effects (font (size 1.0 1.0) (thickness 0.15))))
+        (fp_text user "Nice!Nano" (at 3.7 ${def_pos}1.2 ${p.rot}) (layer B.SilkS knockout) (effects (font (size 1.0 1.0) (thickness 0.15)) (justify mirror)))
+        (fp_text user "Place face down." (at 3.7 ${def_pos}-0.55 ${p.rot}) (layer B.SilkS) (effects (font (size 1.0 1.0) (thickness 0.15)) (justify mirror)))
+        (fp_text user "Solder jumpers on back." (at 3.7 ${def_pos}-1.8 ${p.rot}) (layer B.SilkS) (effects (font (size 1.0 1.0) (thickness 0.15)) (justify mirror)))
       
         ${''/* and now the actual pins */}
         (pad 1 thru_hole circle (at -13.97 ${def_pos}7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.RAW.str})
@@ -142,7 +142,7 @@ module.exports = {
         (pad "" thru_hole rect (at -13.97 -7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.1) (layers B.Cu B.Mask) (zone_connect 0) ${p.P1.str})
       `
     }
-    if(p.orientation == 'down') {
+    if (p.orientation == 'down') {
       return `
         ${standard}
         ${pins('-', '')})
