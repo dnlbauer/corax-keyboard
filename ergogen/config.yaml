@@ -684,6 +684,32 @@ pcbs:
         adjust:
           rotate: 90
           shift: [0, 4]
+      order_number_text:
+        what: text
+        where: [switch_space]
+        params:
+          side: B
+          text: "JLCJLCJLCJLC"
+        adjust:
+          rotate: 10
+          shift: [-9.5, 10]
+      name_text:
+        what: text
+        where: matrix_middle_mod
+        params:
+          text: "Corax56 rev. 1.1"
+        adjust:
+          rotate: 82
+          shift: [-9, -11]
+      name_text_right:
+        what: text
+        where: matrix_middle_mod
+        params:
+          side: B
+          text: "Corax56 rev. 1.1"
+        adjust:
+          rotate: 82
+          shift: [-9, -11]
   switchplate:
     outlines.main.outline: switchplate
     footprints:
