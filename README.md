@@ -57,10 +57,8 @@ Only supports ZMK. The firmware repository can be found here: [https://github.co
 TODO
 
 ## TODO List
-- [ ] Increase diode-socket distance.
-- [ ] Fix MCU pin labels on right-front (Some are mirrored / not on the correct side of the MCU).
-- [ ] Give this project a **name**.
 - [ ] Use github actions to build + release gerber files.
+- [ ] Write a build guide
 
 ## Standing on the shoulders of giants
 
