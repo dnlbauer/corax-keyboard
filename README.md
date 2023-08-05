@@ -16,10 +16,7 @@
 ![mcu2](./images/mcu2.jpg)
 ![case](./images/magnetic_case.jpg)
 ![pcb](./images/pcb.jpg)
-
-## Features
-
-
+![top](./images/pcb_render_front.jpg)
 
 ## Bill of materials
 **Essentials**:
