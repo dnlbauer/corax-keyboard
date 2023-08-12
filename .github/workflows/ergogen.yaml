@@ -1,0 +1,29 @@
+name: Check ergogen
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  node_version: 20.4
+  ergogen_version: 4.0.4
+  ergogen_config: "ergogen"
+  kicad_pcb: "pcbs/pcbs/keyboard.kicad_pcb"
+  dir: .
+
+jobs:
+  ergogen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Node.js ${{env.node_version}}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{env.node_version}}
+      - name: Install ergogen
+        run: npm i -g ergogen@${{env.ergogen_version}}
+      - name: Build with ergogen
+        run: ergogen ${{env.ergogen_config}} -d /tmp/ergogen
