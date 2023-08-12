@@ -31,3 +31,4 @@ jobs:
         with:
           config: /opt/kibot/config/gerbers.kibot.yaml
           board: pcbs/pcbs/keyboard.kicad_pcb
+          verbose: 0
