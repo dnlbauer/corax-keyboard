@@ -29,5 +29,5 @@ jobs:
       - name: Kicad export
         uses: nerdyscout/kicad-exports@v2.3.1
         with:
-          config: any.kibot.yaml
+          config: /opt/kibot/config/gerbers.kibot.yaml
           board: pcbs/pcbs/keyboard.kicad_pcb
