@@ -20,11 +20,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ergogen/ergogen
-          refs: refs/head/release
+          ref: refs/head/release
           path: ergogen-builder
       - name: Install ergogen
         run: cd ergogen-builder; npm install
       - name: Checkout
         uses: actions/checkout@v3
       - name: build
-        run: node ergogen-builder/src/cli.js ergogen -o output_folder
+        run: node ../ergogen-builder/src/cli.js ergogen -o output_folder
