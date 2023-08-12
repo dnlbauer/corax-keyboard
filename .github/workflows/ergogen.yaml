@@ -1,4 +1,4 @@
-name: Ergogen
+name: Check ergogen
 
 on:
   push:
@@ -12,21 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      #- name: Checkout ergogen
-        # uses: actions/checkout@v3
-        # with:
-        #   repository: ergogen/ergogen
-        #   path: ergogen-builder
       - name: Install ergogen
-        run: npm i -g ergogen
-        # run: cd ergogen-builder; npm install
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: build
-        #run: node ../ergogen-builder/src/cli.js ergogen -o output_folder
-        run: ergogen ergogen -o output_folder
+        run: npm i -g ergogen@4.0.4
+      - name: Build with ergogen
+        run: ergogen arart -d /tmp/ergogen
         
