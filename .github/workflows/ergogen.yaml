@@ -8,9 +8,7 @@ on:
 
 jobs:
   ergogen:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,4 +20,14 @@ jobs:
         run: npm i -g ergogen@4.0.4
       - name: Build with ergogen
         run: ergogen ergogen -d /tmp/ergogen
-        
+
+  keyboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Kicad export
+        uses: nerdyscout/kicad-exports@v2.3.1
+        with:
+          config: .github/kibot.yaml
+          board: pcbs/pcbs/keyboard.kicad_pcb
