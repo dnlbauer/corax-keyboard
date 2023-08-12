@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -22,6 +21,4 @@ jobs:
         with:
           name: ergogen/ergogen
           refs: refs/head/release
-          path: ergogen-builder
       - run: cd ergogen-builder; npm install
-      - run: node ergogen-builder/src/cli.js ergogen -o ergogen-output
