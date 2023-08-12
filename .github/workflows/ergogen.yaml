@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      - name: Checkout ergogen
+      #- name: Checkout ergogen
         # uses: actions/checkout@v3
         # with:
         #   repository: ergogen/ergogen
