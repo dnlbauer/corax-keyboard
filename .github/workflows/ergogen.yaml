@@ -19,6 +19,7 @@ jobs:
       - name: Use ergogen
         uses: actions/checkout@master
         with:
-          name: ergogen/ergogen
+          repository: ergogen/ergogen
           refs: refs/head/release
+          path: ergogen-builder
       - run: cd ergogen-builder; npm install
