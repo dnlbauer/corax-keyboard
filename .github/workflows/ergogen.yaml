@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  board: "pcbs/pcbs/keyboard.kicad_pcb"
+  dir: .
+
 jobs:
   ergogen:
     runs-on: ubuntu-latest
@@ -21,14 +25,21 @@ jobs:
       - name: Build with ergogen
         run: ergogen ergogen -d /tmp/ergogen
 
-  keyboard:
+  ERC:
     runs-on: ubuntu-latest
+    container:
+      image: setsoft/kicad_auto:ki6
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Kicad export
-        uses: nerdyscout/kicad-exports@v2.3.1
-        with:
-          config: /opt/kibot/config/gerbers.kibot.yaml
-          board: pcbs/pcbs/keyboard.kicad_pcb
-          verbose: 0
+      - uses: actions/checkout@v3
+      - name: run kibot
+        run: | 
+          kibot -c kibot.yml -b ${{env.board}} -d ${{env.dir}} -s run_drc -v -i
+  DRC:
+    runs-on: ubuntu-latest
+    container:
+      image: setsoft/kicad_auto:ki6
+    steps:
+      - uses: actions/checkout@v3
+      - name: run kibot
+        run: | 
+          kibot -c kibot.yml -b ${{env.board}} -d ${{env.dir}} -s run_erc -v -i
