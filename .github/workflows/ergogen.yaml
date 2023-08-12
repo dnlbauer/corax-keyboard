@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  ergogen:
 
     runs-on: ubuntu-latest
 
