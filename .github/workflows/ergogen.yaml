@@ -1,0 +1,27 @@
+name: Ergogen
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+      - name: Use ergogen
+        uses: actions/checkout@master
+        with:
+          name: ergogen/ergogen
+          refs: refs/head/release
+          path: ergogen-builder
+      - run: cd ergogen-builder; npm install
+      - run: node ergogen-builder/src/cli.js ergogen -o ergogen-output
