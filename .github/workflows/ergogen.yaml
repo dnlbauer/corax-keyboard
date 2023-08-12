@@ -27,4 +27,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: build
-        run: node ../ergogen-builder/src/cli.js ergogen -o output_folder
+        #run: node ../ergogen-builder/src/cli.js ergogen -o output_folder
+        run: ergogen ergogen -o output_folder
+        
