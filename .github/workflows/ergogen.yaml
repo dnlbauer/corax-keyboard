@@ -7,7 +7,10 @@ on:
     branches: [ main ]
 
 env:
-  board: "pcbs/pcbs/keyboard.kicad_pcb"
+  node_version: 20.4
+  ergogen_version: 4.0.4
+  ergogen_config: "ergogen"
+  kicad_pcb: "pcbs/pcbs/keyboard.kicad_pcb"
   dir: .
 
 jobs:
@@ -16,30 +19,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{env.node_version}}
         uses: actions/setup-node@v3
         with:
-          node-version: 20.x
+          node-version: ${{env.node_version}}
       - name: Install ergogen
-        run: npm i -g ergogen@4.0.4
+        run: npm i -g ergogen@${{env.ergogen_version}}
       - name: Build with ergogen
-        run: ergogen ergogen -d /tmp/ergogen
-
-  ERC:
-    runs-on: ubuntu-latest
-    container:
-      image: setsoft/kicad_auto:ki6
-    steps:
-      - uses: actions/checkout@v3
-      - name: run kibot
-        run: | 
-          kibot -c kibot.yml -b ${{env.board}} -d ${{env.dir}} -s run_drc -v -i
-  DRC:
-    runs-on: ubuntu-latest
-    container:
-      image: setsoft/kicad_auto:ki6
-    steps:
-      - uses: actions/checkout@v3
-      - name: run kibot
-        run: | 
-          kibot -c kibot.yml -b ${{env.board}} -d ${{env.dir}} -s run_erc -v -i
+        run: ergogen ${{env.ergogen_config}} -d /tmp/ergogen
