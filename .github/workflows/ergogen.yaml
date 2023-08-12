@@ -17,12 +17,13 @@ jobs:
         with:
           node-version: 20.x
       - name: Checkout ergogen
-        uses: actions/checkout@v3
-        with:
-          repository: ergogen/ergogen
-          path: ergogen-builder
+        # uses: actions/checkout@v3
+        # with:
+        #   repository: ergogen/ergogen
+        #   path: ergogen-builder
       - name: Install ergogen
-        run: cd ergogen-builder; npm install
+        run: npm i -g ergogen
+        # run: cd ergogen-builder; npm install
       - name: Checkout
         uses: actions/checkout@v3
       - name: build
