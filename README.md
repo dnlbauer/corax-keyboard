@@ -11,8 +11,8 @@
 
 ## Gallery
 
+![top](./images/corax_fkcaps.jpg)
 ![top](./images/top.jpg)
-![top](./images/top2.jpg)
 ![mcu1](./images/mcu1.jpg)
 ![mcu2](./images/mcu2.jpg)
 ![case](./images/magnetic_case.jpg)
