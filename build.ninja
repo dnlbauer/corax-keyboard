@@ -5,7 +5,7 @@ rule ergogen
 
 #build pcbs/pcbs/keyboard.kicad_pcb pcbs/pcbs/switchplate.kicad_pcb: ergogen
 #  infolder = ./ergogen
-#  outfolder = ./pcb
+#  outfolder = ./pcbs
 
 # kicad
 # limit paralell jobs because kicad locks file access
