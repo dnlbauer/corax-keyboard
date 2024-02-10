@@ -13,3 +13,5 @@ pcb/pcbs/*.kicad_prl
 *.uf2
 
 *.zip
+
+node_modules
