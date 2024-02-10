@@ -4,9 +4,14 @@ output
 .ninja*
 
 # kicad tmp files
-pcbs/pcbs/fp-info-cache
-pcbs/pcbs/*-backups
-pcb/pcbs/*.kicad_prl
+*/pcbs/source
+*/pcbs/points
+*/pcbs/outlines/_*
+*/pcbs/outlines/*.yaml
+*/pcbs/outlines/*.svg
+*/pcbs/pcbs/fp-info-cache
+*/pcbs/pcbs/*-backups
+*/pcb/pcbs/*.kicad_prl
 *.lck
 
 # zmk firmware binaries
