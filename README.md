@@ -1,7 +1,7 @@
 # Corax: A column-staggered fully-wireless split keyboard with scrollwheels.
 
 - Choc-spaced, hot-swappable
-- Two versions: with 45 or 54 keys
+- Two versions: with 56 or 54 keys
 - Scrollwheel (EVQWGD001) on both sides
 - Strong pinky stagger (0.66) and a 5 deg. pinky splay
 - Fully wireless built for Nice!Nano + ZMK (no TRRS Jack)
