@@ -29,13 +29,12 @@ Natively supports [ZMK](https://zmk.dev/).
 
 ## Build guide
 
-TODO
+[see here](./docs/BuildGuide.md)
 
 ## Standing on the shoulders of giants
 
 - A great tutorial I referenced a lot by FlatFootFox: https://flatfootfox.com/ergogen-introduction/
 - Lots of inspiration and ideas for this project came from these boards: [Choccy](https://github.com/sprengboard/choccy), [Sofle](https://github.com/josefadamcik/SofleKeyboard), [brain](https://github.com/Wesztman/brain), [spleeb](https://github.com/chrishoage/spleeb)
-
 
 ## License
 
