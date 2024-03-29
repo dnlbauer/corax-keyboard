@@ -11,13 +11,12 @@
 
 ## Gallery
 
-![top](./images/corax_fkcaps.jpg)
-![top](./images/top.jpg)
+![corax54](./images/corax54.jpg)
+![corax56](./images/corax56.jpg)
 ![mcu1](./images/mcu1.jpg)
 ![mcu2](./images/mcu2.jpg)
 ![case](./images/magnetic_case.jpg)
 ![pcb](./images/pcb.jpg)
-![top](./images/pcb_render_front.jpg)
 
 ## Corax56 vs Corax54
 

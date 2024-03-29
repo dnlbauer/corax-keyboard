@@ -6,7 +6,7 @@ Designed to hold 4 10x1mm magnets to hold the two halves together for transport.
 
 | Top | Front |
 |-----|-------|
-| ![top](../../images/case_top.png) | ![front](../../images/case_front.png) |
+| ![top](../../../images/corax56_case_render_top.png) | ![front](../../../images/corax56_case_render_front.png) |
 
 ## Bill of Materials
 
