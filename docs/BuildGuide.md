@@ -7,6 +7,19 @@ This guide describes the process of building the Corax54. For the Corax56, the b
 Disclaimer:
 This guide is written from the perspective of someone who already build some keyboards. It is probably not very beginner-friendly. There are many tricks and techniques for soldering and assembling keyboards that are not covered in detail. If this is your first build, I strongly recommend reading one or two more comprehensive guides on other keyboards that offer more detailed instructions first. Doing so will help you to avoid common pitfalls. A great guide I can suggest is the one for the sofle: 
 https://josefadamcik.github.io/SofleKeyboard/build_guide_choc.html
+
+## Ordering PCBs
+
+To order the PCBs, grab the relevant zip file with the gerber files from the [releases page](https://github.com/dnlbauer/corax-keyboard/releases) (named corax*-gerbers.zip) and send them to the PCB etching service of your choice. I personally can recommend [JLCPCP](https://jlcpcb.com/). I recommend these settings:
+
+|||
+|-------------------------|---------------------|
+| Layers                  | 2                   |
+| PCB Thickness           | 1.6 mm              |
+| Surface Finish          | LeadFree HASL       |
+| Via Covering            | Tented              |
+| Board Outline Tolerance | +/- 0.2 mm(Regular) |
+
 ## Buiding the Keyboard
 
 You need two pcbs: for the right and left hand side. Make sure to not mix them up during the build process. If this guide says "front side" and you are building the left hand side of the keybaord, you are meant to work on the side that says "Left Hand Front" on it. In this caes, the side saying "Right Hand Front" is considered to be the back side. 
