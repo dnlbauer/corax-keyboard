@@ -25,7 +25,7 @@ Over the time, I realized that I am not using this button very often. The Corax5
 
 ## Firmware
 
-Natively supports [ZMK](https://zmk.dev/).
+Natively supports [ZMK](https://zmk.dev/). The firmware for the Corax56 and Corax56 can be found in the submodule and is available here: https://github.com/dnlbauer/corax-zmk-config
 
 ## Build guide
 
