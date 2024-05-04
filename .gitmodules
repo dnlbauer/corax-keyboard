@@ -1,0 +1,3 @@
+[submodule "zmk-config"]
+	path = zmk-config
+	url = git@github.com:dnlbauer/corax-zmk-config.git
